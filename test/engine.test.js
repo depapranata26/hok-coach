@@ -72,5 +72,14 @@ ok(tips.length >= 2, 'tips ada');
 const hc = E.heroCounters('daji', HEROES);
 ok(hc && hc.hero.name === 'Daji', 'heroCounters jalan');
 
+// Skenario 8: lane-fit — tiap lane dipick role yang wajar
+const teamFit = E.recommendTeam(e1, HEROES, an1);
+const laneRole = { 'Roaming': ['Tank','Support'], 'Clash Lane': ['Fighter'], 'Mid Lane': ['Mage'], 'Jungle': ['Assassin'], 'Farm Lane': ['Marksman'] };
+let fitOk = true;
+for (const t of teamFit) {
+  if (!t.hero || !(t.hero.class||[]).some(c => laneRole[t.lane].includes(c))) { fitOk = false; console.log('lane-fit miss:', t.lane, t.hero && t.hero.name, t.hero && t.hero.class); }
+}
+ok(fitOk, 'tiap lane dipick role yang sesuai');
+
 console.log(`\n${pass} lolos, ${fail} gagal`);
 process.exit(fail ? 1 : 0);

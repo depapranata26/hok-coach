@@ -103,6 +103,18 @@
     return { s, why };
   }
 
+  function laneFit(hero, lane) {
+    const cls = hero.class || [];
+    const hasC = c => cls.includes(c);
+    let s = 0; const why = [];
+    if (lane === 'Roaming' && (hasC('Tank') || hasC('Support'))) { s += 3; why.push('role roam alami'); }
+    if (lane === 'Clash Lane' && hasC('Fighter')) { s += 3; why.push('fighter clash lane'); }
+    if (lane === 'Mid Lane' && hasC('Mage')) { s += 3; why.push('mage mid lane'); }
+    if (lane === 'Jungle' && (hasC('Assassin') || has(hero, 'jungle'))) { s += 3; why.push('jungler alami'); }
+    if (lane === 'Farm Lane' && hasC('Marksman')) { s += 3; why.push('marksman farm lane'); }
+    return { s, why };
+  }
+
   function recommendTeam(enemyIds, HEROES, analysis) {
     const an = analysis || analyzeEnemy(enemyIds, HEROES);
     const used = new Set(enemyIds);
@@ -110,8 +122,9 @@
     return LANES.map(lane => {
       const cands = HEROES.filter(h => !used.has(h.id) && !picked.has(h.id) && (h.roles || []).includes(lane));
       const scored = cands.map(h => {
-        const { s, why } = scoreCounter(h, an);
-        return { hero: h, s, why };
+        const c = scoreCounter(h, an);
+        const f = laneFit(h, lane);
+        return { hero: h, s: c.s + f.s, why: [...f.why, ...c.why] };
       }).sort((x, y) => y.s - x.s);
       const best = scored[0];
       if (!best) return { lane, hero: null, why: [] };
