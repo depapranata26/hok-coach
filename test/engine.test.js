@@ -2,6 +2,7 @@ const E = require('../engine.js');
 const HEROES = require('../data/heroes.json');
 const ITEMS = require('../data/items.json');
 const ARCANA = require('../data/arcana.json');
+const FLEX = require('../data/flex_picks.json');
 
 let pass = 0, fail = 0;
 const ok = (cond, msg) => { if (cond) { pass++; } else { fail++; console.log('FAIL:', msg); } };
@@ -64,7 +65,9 @@ const e6 = ['cai-yan', 'dyadia', 'biron', 'yaria', 'zhang-fei'].map(n => { const
 const an6 = E.analyzeEnemy(e6, HEROES);
 ok(an6.heal >= 2, 'e6 heal terdeteksi: ' + an6.heal);
 const b6 = E.buildFor(byName('Hou Yi') || HEROES[0], an6, ITEMS);
-ok(b6.situational.some(s => /mortal punisher|venomous/i.test(s.item.name)), 'e6 anti-heal direkomendasikan');
+const b6All = b6.core.concat(b6.situational.map(s => s.item));
+ok(b6All.some(i => /mortal punisher|venomous/i.test(i.name)), 'e6 anti-heal direkomendasikan');
+ok(b6.core.findIndex(i => /mortal punisher|venomous/i.test(i.name)) <= 2, 'e6 anti-heal dibeli awal (rush): ' + b6.core.map(i=>i.name).join(','));
 const tips = E.makeStrategy(an6);
 ok(tips.length >= 2, 'tips ada');
 
@@ -72,14 +75,44 @@ ok(tips.length >= 2, 'tips ada');
 const hc = E.heroCounters('daji', HEROES);
 ok(hc && hc.hero.name === 'Daji', 'heroCounters jalan');
 
-// Skenario 8: lane-fit — tiap lane dipick role yang wajar
-const teamFit = E.recommendTeam(e1, HEROES, an1);
+// Skenario 8: lane-fit lunak — tiap lane dipick role wajar ATAU flex meta komunitas
+const teamFit = E.recommendTeam(e1, HEROES, an1, FLEX);
 const laneRole = { 'Roaming': ['Tank','Support'], 'Clash Lane': ['Fighter'], 'Mid Lane': ['Mage'], 'Jungle': ['Assassin'], 'Farm Lane': ['Marksman'] };
 let fitOk = true;
 for (const t of teamFit) {
-  if (!t.hero || !(t.hero.class||[]).some(c => laneRole[t.lane].includes(c))) { fitOk = false; console.log('lane-fit miss:', t.lane, t.hero && t.hero.name, t.hero && t.hero.class); }
+  const roleOk = t.hero && (t.hero.class||[]).some(c => laneRole[t.lane].includes(c));
+  const flexOk = t.hero && E.isLaneCandidate(t.hero, t.lane, FLEX) === 'flex';
+  if (!t.hero || !(roleOk || flexOk)) { fitOk = false; console.log('lane-fit miss:', t.lane, t.hero && t.hero.name, t.hero && t.hero.class); }
 }
-ok(fitOk, 'tiap lane dipick role yang sesuai');
+ok(fitOk, 'tiap lane dipick role wajar atau flex meta');
+
+// Skenario 9: keyword fix — burst assassin (Lam) core memuat armor penetration
+const lamHero = HEROES.find(h => h.id === 'lam');
+const bLam = E.buildFor(lamHero, an2, ITEMS);
+const apItem = bLam.core.find(i => /armor penetration/i.test(((i.stats||'')+' '+(i.effect||''))));
+ok(!!apItem, 'core Lam ada armor penetration: ' + bLam.core.map(i=>i.name).join(','));
+
+// Skenario 10: matchup-aware — Loong vs magic burst, Runic Blade masuk core
+const loong = HEROES.find(h => h.id === 'loong');
+const bLoong = E.buildFor(loong, an1, ITEMS);
+ok(bLoong.core.some(i => i.name === 'Runic Blade'), 'Runic Blade masuk core Loong vs magic burst: ' + bLoong.core.map(i=>i.name).join(','));
+
+// Skenario 11: flex data valid + kandidat flex jalan
+ok(E.isLaneCandidate(HEROES.find(h=>h.id==='li-xin'), 'Jungle', FLEX) === 'flex', 'Li Xin flex jungle');
+ok(E.isLaneCandidate(HEROES.find(h=>h.id==='yuhuan'), 'Jungle', FLEX) === 'flex', 'Yuhuan flex jungle');
+ok(E.isLaneCandidate(HEROES.find(h=>h.id==='li-xin'), 'Mid Lane', FLEX) === null, 'Li Xin bukan kandidat mid');
+let flexDataOk = true;
+for (const [id, f] of Object.entries(FLEX)) {
+  if (!HEROES.some(h => h.id === id)) { flexDataOk = false; console.log('flex id tidak ada di heroes:', id); }
+  if (!f.lanes || !f.lanes.length) { flexDataOk = false; console.log('flex tanpa lanes:', id); }
+}
+ok(flexDataOk && Object.keys(FLEX).length >= 15, 'flex_picks.json valid (' + Object.keys(FLEX).length + ' hero)');
+
+// Skenario 12: flex hero yang kepick dapat flexLane + build mode jungle
+const teamFlex = E.recommendTeam(e1, HEROES, an1, FLEX);
+const flexPick = teamFlex.find(t => t.flexLane);
+console.log('contoh flex pick:', flexPick ? flexPick.lane + ' → ' + flexPick.hero.name : '(tidak ada di skenario ini)');
+ok(teamFlex.every(t => t.hero), 'semua lane terisi dengan FLEX');
 
 console.log(`\n${pass} lolos, ${fail} gagal`);
 process.exit(fail ? 1 : 0);

@@ -27,6 +27,8 @@ nav#tabs button.active{color:#f5c451}
 .chip.active{background:#f5c451;color:#0d1526;border-color:#f5c451;font-weight:700}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px}
 .hero{background:#111d33;border:2px solid #24344f;border-radius:10px;padding:8px 4px;text-align:center;cursor:pointer;position:relative}
+.face{position:relative;overflow:hidden;flex:0 0 auto}
+.sheet .face{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#0d1526}
 .hero .face{width:44px;height:44px;border-radius:50%;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#0d1526;position:relative;overflow:hidden}
 .face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero .nm{font-size:11px;line-height:1.25;min-height:28px}
@@ -138,8 +140,8 @@ h2.sec{font-size:15px;color:#f5c451;margin:14px 0 8px}
 <script src="engine.js"></script>
 <script>
 const E = window.HokEngine;
-let HEROES=[], ITEMS=[], ARCANAS=null;
-const state = { enemies:[], fLawan:'all', qLawan:'', fRacik:'all', qRacik:'', dt:'heroes', qData:'', racik:null };
+let HEROES=[], ITEMS=[], ARCANAS=null, FLEX={};
+const state = { enemies:[], fLawan:'all', qLawan:'', fRacik:'all', qRacik:'', dt:'heroes', qData:'', racik:null, racikEnemy:true };
 const CLSCOLOR = {Fighter:'#e8a33d',Mage:'#9d7bff',Assassin:'#ff6b6b',Marksman:'#4dd0a6',Tank:'#7ba7ff',Support:'#ffd166',Custom:'#aaa'};
 const CATCOLOR = {attack:'#4dd0a6',magic:'#9d7bff',defense:'#7ba7ff',movement:'#e8a33d',jungle:'#ff9f6b',roaming:'#ffd166'};
 
@@ -165,10 +167,11 @@ function bindGrid(el, fn){
 }
 
 async function load(){
-  [HEROES, ITEMS, ARCANAS] = await Promise.all([
+  [HEROES, ITEMS, ARCANAS, FLEX] = await Promise.all([
     fetch('data/heroes.json').then(r=>r.json()),
     fetch('data/items.json').then(r=>r.json()),
     fetch('data/arcana.json').then(r=>r.json()),
+    fetch('data/flex_picks.json').then(r=>r.json()).catch(()=>({})),
   ]);
   buildFilters(); renderLawan(); renderRacikGrid(); renderData();
 }
@@ -219,7 +222,7 @@ document.getElementById('btnAnalisis').onclick=()=>{
 // ---------- ANALISIS ----------
 function renderAnalisis(){
   const an = E.analyzeEnemy(state.enemies, HEROES);
-  const team = E.recommendTeam(state.enemies, HEROES, an);
+  const team = E.recommendTeam(state.enemies, HEROES, an, FLEX);
   const tips = E.makeStrategy(an);
   const tot = Math.max(1, an.phys + an.mag);
   const w = document.getElementById('anaWrap');
@@ -239,7 +242,7 @@ function renderAnalisis(){
     <h2 class="sec">🛡️ Tim counter rekomendasi</h2>
     <div id="teamList">${team.map((t,i)=>t.hero?`
       <div class="teamrow" data-i="${i}">${face(t.hero)}
-        <div class="info"><div class="ln">${t.lane}</div><div class="hn">${t.hero.name}</div>
+        <div class="info"><div class="ln">${t.lane}${t.flexLane?' <span class="tag" style="background:#6a4dff">🔀 flex</span>':''}</div><div class="hn">${t.hero.name}</div>
         <div class="rs">${t.why.length?t.why.join(' · '):'counter umum lane ini'}</div></div>
         <div class="chev">▾</div>
       </div>
@@ -252,19 +255,21 @@ function renderAnalisis(){
     const i = +r.dataset.i, b = document.getElementById('build'+i);
     if(b.classList.contains('open')){b.classList.remove('open');return;}
     w.querySelectorAll('.build').forEach(x=>x.classList.remove('open'));
-    b.innerHTML = buildHTML(team[i].hero, an);
+    b.innerHTML = buildHTML(team[i].hero, an, team[i].flexLane);
     b.classList.add('open');
     b.scrollIntoView({block:'nearest',behavior:'smooth'});
   });
 }
 
-function buildHTML(hero, an){
-  const b = E.buildFor(hero, an, ITEMS);
+function buildHTML(hero, an, flexLane){
+  const b = E.buildFor(hero, an, ITEMS, {flexLane});
   const arc = E.arcanaFor(hero, ARCANAS);
   const dot = cat => `<span class="dot" style="background:${CATCOLOR[cat]||'#aaa'}"></span>`;
   return `
+    ${flexLane?`<div class="note">🔀 <b>Flex meta:</b> ${hero.name} dimainkan sebagai ${flexLane} — build di bawah menyesuaikan lane ini.</div>`:''}
     <div class="itline">${dot('movement')}<div><b>👟 ${b.boots.item?b.boots.item.name:'-'} </b><span class="rsn">— ${b.boots.reason}</span></div></div>
-    ${b.core.map((it,i)=>`<div class="itline">${dot(it.category)}<div><b>${i+1}. ${it.name}</b><div class="rsn">${it.stats||''}</div></div></div>`).join('')}
+    ${b.core.map((it,i)=>`<div class="itline">${dot(it.category)}<div><b>${i+1}. ${it.name}${(b.rush||[]).includes(it.name)?' ⚡':''}</b><div class="rsn">${it.stats||''}</div></div></div>`).join('')}
+    ${(b.rush||[]).length?`<div class="note">⚡ = dibeli lebih awal (item ke-2) khusus lawan musuh ini.</div>`:''}
     ${b.situational.map(s=>`<div class="itline">${dot(s.item.category)}<div><b>🔁 ${s.item.name}</b> <span class="rsn">— ${s.reason}</span></div></div>`).join('')}
     ${arc?`<div class="itline"><div>🀄 <b>Arcana:</b> <span class="tag" style="background:#5c1f28">${arc.red.name}</span><span class="tag" style="background:#1f3a5c">${arc.blue.name}</span><span class="tag" style="background:#1f5c3a">${arc.green.name}</span><div class="rsn">${arc.note||''}</div></div></div>`:''}
     ${b.notes.map(n=>`<div class="note">ℹ️ ${n}</div>`).join('')}
@@ -282,8 +287,15 @@ function renderRacik(){
   const w = document.getElementById('racikWrap');
   const hero = HEROES.find(h=>h.id===state.racik);
   if(!hero){w.innerHTML='';return;}
-  const an = E.analyzeEnemy([], HEROES);
-  w.innerHTML = `<div class="card"><h3>🎴 ${hero.name} <span class="note">${(hero.class||[]).join('/')} · ${(hero.roles||[]).join('/')}</span></h3>${buildHTML(hero,an)}</div>`;
+  const useEnemy = state.racikEnemy && state.enemies.length > 0;
+  const an = E.analyzeEnemy(useEnemy ? state.enemies : [], HEROES);
+  const eNames = useEnemy ? state.enemies.map(id=>(HEROES.find(h=>h.id===id)||{}).name).filter(Boolean).join(', ') : '';
+  w.innerHTML = `<div class="card"><h3>🎴 ${hero.name} <span class="note">${(hero.class||[]).join('/')} · ${(hero.roles||[]).join('/')}</span></h3>
+    <button class="chip${state.racikEnemy?' active':''}" onclick="state.racikEnemy=!state.racikEnemy;renderRacik()">🎯 Sesuaikan ke musuh</button>
+    ${useEnemy?`<div class="note">Build disesuaikan vs: <b>${eNames}</b> <a href="#" onclick="go('tabLawan');return false" style="color:#8fd0ff">ubah</a></div>`
+              :state.enemies.length?`<div class="note">Nyalakan "🎯 Sesuaikan ke musuh" biar item ikut ngikutin hero musuh.</div>`
+              :`<div class="note">Pilih hero musuh di tab ⚔️ Lawan biar build-nya adaptif.</div>`}
+    ${buildHTML(hero,an)}</div>`;
   w.scrollIntoView({block:'nearest',behavior:'smooth'});
 }
 

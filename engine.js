@@ -25,15 +25,15 @@
     const isFighter = cls.includes('Fighter');
 
     if (phys && (isMM || has(hero, 'attack-speed'))) { w['attack speed'] = 3; w['crit'] = 3; w['physical attack'] = 2; }
-    if (phys && (isAsn || isFighter) && has(hero, 'burst')) { w['physical pierce'] = 3; w['cooldown'] = 2; w['physical attack'] = 3; }
+    if (phys && (isAsn || isFighter) && has(hero, 'burst')) { w['armor penetration'] = 3; w['cooldown'] = 2; w['physical attack'] = 3; }
     if (phys && !isMM && !has(hero, 'attack-speed')) { w['physical attack'] = (w['physical attack'] || 0) + 1; w['max health'] = (w['max health'] || 0) + 1; }
-    if (mag) { w['magic power'] = 3; w['magic pierce'] = 3; w['cooldown'] = 2; }
+    if (mag) { w['magical attack'] = 3; w['magical penetration'] = 3; w['cooldown'] = 2; }
     if (mag && hasAny(hero, ['sustain', 'poke', 'lifesteal'])) { w['magical lifesteal'] = 3; }
     if (hasAny(hero, ['lifesteal'])) { w['lifesteal'] = 3; }
     if (has(hero, 'true-damage')) { w['attack speed'] = (w['attack speed'] || 0) + 2; w['max health'] = (w['max health'] || 0) + 1; }
     if (isTank || (isSupp && !mag)) { w['max health'] = 3; w['physical defense'] = 2; w['magical defense'] = 2; }
     if (hasAny(hero, ['mobility', 'dash', 'dive'])) { w['movement speed'] = 1; }
-    if (hero.damageType === 'mixed' || hero.damageType === 'hybrid') { w['physical attack'] = 1; w['magic power'] = 1; w['magic pierce'] = 1; w['physical pierce'] = 1; }
+    if (hero.damageType === 'mixed' || hero.damageType === 'hybrid') { w['physical attack'] = 1; w['magical attack'] = 1; w['magical penetration'] = 1; w['armor penetration'] = 1; }
     return w;
   }
 
@@ -107,29 +107,41 @@
     const cls = hero.class || [];
     const hasC = c => cls.includes(c);
     let s = 0; const why = [];
-    if (lane === 'Roaming' && (hasC('Tank') || hasC('Support'))) { s += 3; why.push('role roam alami'); }
-    if (lane === 'Clash Lane' && hasC('Fighter')) { s += 3; why.push('fighter clash lane'); }
-    if (lane === 'Mid Lane' && hasC('Mage')) { s += 3; why.push('mage mid lane'); }
-    if (lane === 'Jungle' && (hasC('Assassin') || has(hero, 'jungle'))) { s += 3; why.push('jungler alami'); }
-    if (lane === 'Farm Lane' && hasC('Marksman')) { s += 3; why.push('marksman farm lane'); }
+    // bobot role standar diringankan: meta sering off-role
+    if (lane === 'Roaming' && (hasC('Tank') || hasC('Support'))) { s += 1; why.push('role roam alami'); }
+    if (lane === 'Clash Lane' && hasC('Fighter')) { s += 1; why.push('fighter clash lane'); }
+    if (lane === 'Mid Lane' && hasC('Mage')) { s += 1; why.push('mage mid lane'); }
+    if (lane === 'Jungle' && (hasC('Assassin') || has(hero, 'jungle'))) { s += 1; why.push('jungler alami'); }
+    if (lane === 'Farm Lane' && hasC('Marksman')) { s += 1; why.push('marksman farm lane'); }
     return { s, why };
   }
 
-  function recommendTeam(enemyIds, HEROES, analysis) {
+  // flex meta dari riset komunitas (data/flex_picks.json): hero → lane alternatif yg viable
+  function isLaneCandidate(hero, lane, FLEX) {
+    if ((hero.roles || []).includes(lane)) return 'role';
+    if (FLEX && FLEX[hero.id] && (FLEX[hero.id].lanes || []).includes(lane)) return 'flex';
+    return null;
+  }
+
+  function recommendTeam(enemyIds, HEROES, analysis, FLEX) {
     const an = analysis || analyzeEnemy(enemyIds, HEROES);
+    FLEX = FLEX || {};
     const used = new Set(enemyIds);
     const picked = new Set();
     return LANES.map(lane => {
-      const cands = HEROES.filter(h => !used.has(h.id) && !picked.has(h.id) && (h.roles || []).includes(lane));
+      const cands = HEROES.filter(h => !used.has(h.id) && !picked.has(h.id) && isLaneCandidate(h, lane, FLEX));
       const scored = cands.map(h => {
         const c = scoreCounter(h, an);
         const f = laneFit(h, lane);
-        return { hero: h, s: c.s + f.s, why: [...f.why, ...c.why] };
+        const kind = isLaneCandidate(h, lane, FLEX);
+        let fs = 0; const fwhy = [];
+        if (kind === 'flex' && FLEX[h.id]) { fs = 2; fwhy.push('🔀 flex meta: ' + FLEX[h.id].note); }
+        return { hero: h, s: c.s + f.s + fs, why: [...fwhy, ...f.why, ...c.why], flexLane: kind === 'flex' ? lane : null, flexNote: kind === 'flex' ? FLEX[h.id].note : null };
       }).sort((x, y) => y.s - x.s);
       const best = scored[0];
       if (!best) return { lane, hero: null, why: [] };
       picked.add(best.hero.id);
-      return { lane, hero: best.hero, score: best.s, why: best.why.slice(0, 2) };
+      return { lane, hero: best.hero, score: best.s, why: best.why.slice(0, 2), flexLane: best.flexLane, flexNote: best.flexNote };
     });
   }
 
@@ -179,9 +191,25 @@
     return ['attack', 'defense'];
   }
 
+  // ---------- matchup-aware wants: core ikut menyesuaikan ancaman musuh ----------
+  function matchupWants(hero, an) {
+    const w = {};
+    const cls = hero.class || [];
+    const squishy = cls.includes('Marksman') || cls.includes('Mage') || cls.includes('Assassin');
+    if (an.mag >= 3 && squishy) w['magical defense'] = 2.5;
+    if (an.phys >= 3 && squishy) w['physical defense'] = 2.5;
+    if (an.burst >= 3) w['max health'] = (w['max health'] || 0) + 2;
+    if (an.heal >= 2) w['healing'] = 2.5; // Mortal Punisher / Venomous Staff
+    if (an.tank >= 2 && hero.damageType === 'physical') w['armor penetration'] = (w['armor penetration'] || 0) + 2.5; // Star Breaker
+    if (an.tank >= 2 && hero.damageType === 'magical') w['magical penetration'] = (w['magical penetration'] || 0) + 2.5; // Void Staff
+    return w;
+  }
+
   function buildFor(hero, analysis, ITEMS, opts = {}) {
     const an = analysis;
     const wants = kitWants(hero);
+    const mw = matchupWants(hero, an);
+    for (const [k, v] of Object.entries(mw)) wants[k] = (wants[k] || 0) + v;
     const boots = pickBoots(hero, an, ITEMS);
     const cats = coreCategories(hero);
     const pool = ITEMS.filter(i =>
@@ -189,8 +217,6 @@
       !Object.keys(BOOTS).includes(i.name) &&
       i.name !== boots.item?.name
     );
-    const jungle = (hero.roles || []).includes('Jungle');
-    const roam = (hero.roles || []).includes('Roaming') && (hero.class || []).includes('Support');
     let core = pool
       .map(i => ({ item: i, s: scoreItem(i, wants) }))
       .filter(x => x.s > 0)
@@ -201,6 +227,22 @@
     if (core.length < 5) {
       const extra = pool.filter(i => !core.includes(i)).slice(0, 5 - core.length);
       core = core.concat(extra);
+    }
+    // rush: item counter yg menurut meta komunitas dibeli lebih awal (slot item ke-2)
+    const rushNames = [];
+    if (an.heal >= 2) rushNames.push(hero.damageType === 'magical' ? 'Venomous Staff' : 'Mortal Punisher');
+    if (an.mag >= 3 && ((hero.class || []).includes('Marksman') || (hero.class || []).includes('Assassin')) && hero.damageType === 'physical') rushNames.push('Runic Blade');
+    if (an.tank >= 2 && hero.damageType === 'physical') rushNames.push('Star Breaker');
+    if (an.tank >= 2 && hero.damageType === 'magical') rushNames.push('Void Staff');
+    const rushDone = [];
+    for (const name of rushNames) {
+      const it = pool.find(i => i.name === name);
+      if (it) {
+        core = core.filter(i => i !== it);
+        core.splice(1, 0, it); // paksa ke slot item ke-2
+        core = core.slice(0, 5);
+        if (!rushDone.includes(name)) rushDone.push(name);
+      }
     }
     const byName = n => ITEMS.find(i => i.name === n);
     const situational = [];
@@ -221,10 +263,15 @@
     }
     if (an.attackSpeed >= 1 && an.phys >= 2) addSit("Protector's Cuirass", 'lambatkan attack speed musuh');
     if (an.burst >= 3) addSit('Sage\'s Sanctuary', 'jaga-jaga kena burst (revive)');
+    if ((hero.class || []).includes('Mage') && (an.dive >= 2 || an.mobility >= 3)) addSit('Splendor', 'selamat dari dive assassin');
+    if ((hero.class || []).includes('Assassin') && an.burst >= 2) addSit('Pure Sky', 'damage reduction 35% lawan burst');
     const notes = [];
+    const jungle = (hero.roles || []).includes('Jungle') || opts.flexLane === 'Jungle';
+    const roam = ((hero.roles || []).includes('Roaming') || opts.flexLane === 'Roaming') && (hero.class || []).includes('Support');
     if (jungle) notes.push('Jungle: mulai dari Hunting Knife, upgrade sesuai kebutuhan.');
     if (roam) notes.push('Roam: Knowledge Gem dulu, upgrade ke Guardian / Crimson Shadow / Stormchaser.');
-    return { boots, core, situational: situational.slice(0, 3), notes, wants, archetype: archetypeOf(hero) };
+    if (roam && an.stealth >= 1) notes.push('Vs stealth: cek upgrade roam ke arah reveal (Radiance) di in-game.');
+    return { boots, core, situational: situational.slice(0, 3), notes, wants, rush: rushDone, archetype: archetypeOf(hero) };
   }
 
   // ---------- arcana ----------
@@ -276,7 +323,7 @@
   }
 
   return {
-    LANES, analyzeEnemy, recommendTeam, buildFor, arcanaFor,
+    LANES, analyzeEnemy, recommendTeam, buildFor, arcanaFor, isLaneCandidate, matchupWants,
     makeStrategy, kitWants, archetypeOf, heroCounters,
   };
 });
