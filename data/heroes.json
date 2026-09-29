@@ -1,0 +1,4474 @@
+[
+  {
+    "id": "agudo",
+    "name": "Agudo",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "jungle",
+      "companion",
+      "mobility",
+      "poke"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Mountain Encounter",
+        "effect": "Passive. Agudo bonds with her beast companion and fights alongside it, gaining bonus effects while mounted."
+      },
+      {
+        "name": "Wild Growth",
+        "effect": "Plants seeds that sprout into damaging growths, harassing enemies in an area."
+      },
+      {
+        "name": "Tumble (unverified)",
+        "effect": "Tumbles a short distance to reposition, with variant effects depending on her current form."
+      },
+      {
+        "name": "Gorge Mobilization",
+        "effect": "Calls a massive surge from the gorge, dealing heavy damage in an area."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "alessio",
+    "name": "Alessio",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "mobility",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Rebellious Little Hawk",
+        "effect": "Passive. Alessio's hawk companion assists his attacks, adding bonus damage to his targets."
+      },
+      {
+        "name": "Upgraded Shell",
+        "effect": "Fires an upgraded shell that explodes on impact, dealing area damage."
+      },
+      {
+        "name": "Legendary Hero Debut",
+        "effect": "Dashes forward in a heroic entrance, repositioning and gaining a burst of mobility."
+      },
+      {
+        "name": "Sunset Fireworks Show",
+        "effect": "Unleashes a barrage of fireworks that rains explosive damage over an area."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "allain",
+    "name": "Allain",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "duelist",
+      "sustain",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Howling Sword",
+        "effect": "Slashes enemies with a howling strike that deals damage and slows them."
+      },
+      {
+        "name": "Meteor Strike",
+        "effect": "Leaps to a target and crashes down with meteoric force, damaging nearby enemies."
+      },
+      {
+        "name": "Moonflash",
+        "effect": "Dashes through enemies, dealing damage and gaining a shield."
+      },
+      {
+        "name": "Death at Sunset",
+        "effect": "Unleashes a devastating flurry of sword strikes across an area."
+      }
+    ],
+    "counters": null,
+    "note": "Skill names follow Arena of Valor sources; HoK-specific naming may differ."
+  },
+  {
+    "id": "angela",
+    "name": "Angela",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "burst",
+      "poke",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Flame Incantation",
+        "effect": "Passive. Her skills scorch enemies, stacking burn damage over time."
+      },
+      {
+        "name": "Scorching Barrage",
+        "effect": "Hurls fireballs in a line, damaging and slowing enemies."
+      },
+      {
+        "name": "Chaos Cinders",
+        "effect": "Detonates chaotic flames in an area for heavy burst damage."
+      },
+      {
+        "name": "Blazing Brilliance",
+        "effect": "Channels a massive beam of blazing magic, melting enemies in a line."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "arke",
+    "name": "Arke",
+    "class": [
+      "Assassin"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "assassin",
+      "burst",
+      "mobility",
+      "jungle"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Kiss of Death",
+        "effect": "Passive. Her attacks mark enemies, and striking a marked target deals bonus damage."
+      },
+      {
+        "name": "Arclight",
+        "effect": "Dashes in an arc, damaging enemies she passes through."
+      },
+      {
+        "name": "Untouchable",
+        "effect": "Briefly becomes untargetable while repositioning."
+      },
+      {
+        "name": "Phantom Dance",
+        "effect": "Blinks between enemies in a deadly dance, dealing burst damage."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "arli",
+    "name": "Arli",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "mobility",
+      "kite",
+      "late-game"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Falling Leaves",
+        "effect": "Passive. Her attacks scatter leaves that deal bonus damage to nearby enemies."
+      },
+      {
+        "name": "Lithe Step",
+        "effect": "Dashes gracefully, gaining mobility to dodge danger and reposition."
+      },
+      {
+        "name": "Maple Dance",
+        "effect": "Spins through enemies with her umbrella, dealing repeated damage."
+      },
+      {
+        "name": "Autumn Storm",
+        "effect": "Unleashes an autumn storm of leaves over an area."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "arthur",
+    "name": "Arthur",
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "cc",
+      "dive",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Holy Vanguard",
+        "effect": "Passive. Gains bonus defenses and damage as he stays in combat."
+      },
+      {
+        "name": "Valiant Charge",
+        "effect": "Charges forward, damaging and slowing enemies in his path."
+      },
+      {
+        "name": "Whirling Strike",
+        "effect": "Spins his sword around him, damaging nearby enemies."
+      },
+      {
+        "name": "Might of Excalibur",
+        "effect": "Slams down with holy might, dealing massive area damage."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "ata",
+    "name": "Ata",
+    "class": [
+      "Tank"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "cc",
+      "isolation",
+      "barrier"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Child of the Sea",
+        "effect": "Passive. Gains bonus defenses and combat effects tied to the sea."
+      },
+      {
+        "name": "Wavewalking",
+        "effect": "Rides a wave forward, damaging and knocking aside enemies."
+      },
+      {
+        "name": "Anchor",
+        "effect": "Slams his anchor down, creating a barrier that blocks and controls enemies."
+      },
+      {
+        "name": "Ghost Ship",
+        "effect": "Summons a ghost ship that crashes through enemies, isolating them."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "athena",
+    "name": "Athena",
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "roles": [
+      "Jungle",
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "shield",
+      "dive",
+      "revive"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Divine Awakening",
+        "effect": "Passive. Revives at her current location after death, gaining temporary power."
+      },
+      {
+        "name": "Holy Advance",
+        "effect": "Dashes forward with her spear, damaging enemies in her path."
+      },
+      {
+        "name": "Unstoppable Spear",
+        "effect": "Charges with her spear, piercing through enemies."
+      },
+      {
+        "name": "Immovable Aegis",
+        "effect": "Raises an aegis shield that blocks damage and reflects it back."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "augran",
+    "name": "Augran",
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "mixed",
+    "range": "melee",
+    "traits": [
+      "burst",
+      "sustain",
+      "mobility",
+      "jungle"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Soul Resonance",
+        "effect": "Passive. His attacks resonate with souls, dealing mixed damage."
+      },
+      {
+        "name": "Path of Passing",
+        "effect": "Dashes along a path, damaging enemies he passes through."
+      },
+      {
+        "name": "Death's Precipice",
+        "effect": "Pulls enemies toward the precipice, dealing damage and slowing them."
+      },
+      {
+        "name": "Conductor of Souls",
+        "effect": "Conducts a storm of souls, dealing heavy mixed damage around him."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "bai-qi",
+    "name": "Bai Qi",
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "cc",
+      "pull",
+      "sustain"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Reaper's Revenge",
+        "effect": "Passive. Gains bonus attack and sustain as he takes damage in battle."
+      },
+      {
+        "name": "Blood Echo",
+        "effect": "Slashes in an arc, dealing damage and healing himself."
+      },
+      {
+        "name": "Death's Grasp",
+        "effect": "Reaches out with a deathly grip, pulling enemies toward him."
+      },
+      {
+        "name": "Heart of Fear",
+        "effect": "Terrifies nearby enemies, dealing damage and reducing the damage they deal."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "biron",
+    "name": "Biron",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "sustain",
+      "duelist",
+      "damage-reduction"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Fearless Chariot",
+        "effect": "Passive. Charges into battle fearlessly, gaining damage reduction."
+      },
+      {
+        "name": "Electrifying Charge",
+        "effect": "Charges forward wreathed in lightning, damaging enemies in his path."
+      },
+      {
+        "name": "Storm Strike",
+        "effect": "Strikes with storm energy, dealing damage and slowing enemies."
+      },
+      {
+        "name": "Force Field Suppression",
+        "effect": "Deploys a force field that suppresses enemies and reduces incoming damage."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "butterfly",
+    "name": "Butterfly",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "reset",
+      "assassin",
+      "burst",
+      "jungle"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Assassination",
+        "effect": "Passive. Takedowns reset her cooldowns, letting her chain kills."
+      },
+      {
+        "name": "Whirlwind",
+        "effect": "Spins through enemies, dealing damage around her."
+      },
+      {
+        "name": "Sword Propel",
+        "effect": "Propels her sword forward, damaging enemies in a line."
+      },
+      {
+        "name": "Death Dealer",
+        "effect": "Deals massive burst damage to a single target."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "cai-yan",
+    "name": "Cai Yan",
+    "class": [
+      "Support"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "heal",
+      "cc",
+      "poke",
+      "support"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Can't Touch This",
+        "effect": "Passive. Gains protection or speed when enemies get too close."
+      },
+      {
+        "name": "Healing Hymn",
+        "effect": "Plays a hymn that heals nearby allies."
+      },
+      {
+        "name": "Earworm",
+        "effect": "Her melody damages and slows enemies caught in it."
+      },
+      {
+        "name": "Tune of Tranquility",
+        "effect": "A tranquil tune that heals allies over time."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "chano",
+    "name": "Chano",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "trap",
+      "vision",
+      "poke",
+      "kite"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Hunting",
+        "effect": "Passive. His wolf companion hunts with him, adding bonus damage to his attacks."
+      },
+      {
+        "name": "Soaring Signal",
+        "effect": "Sends a signal that reveals and damages enemies in an area."
+      },
+      {
+        "name": "Lupine Trap",
+        "effect": "Sets a trap that snares enemies who step on it."
+      },
+      {
+        "name": "Leader Stance",
+        "effect": "Takes a commanding stance, empowering his attacks for a duration."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "charlotte",
+    "name": "Charlotte",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "combo",
+      "burst",
+      "mobility",
+      "duelist"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Splash Gradation (unverified)",
+        "effect": "Passive. Her attacks build gradation, enhancing her next skills."
+      },
+      {
+        "name": "Tri-Slash",
+        "effect": "Slashes three times in quick succession, dealing damage."
+      },
+      {
+        "name": "Splash Fount",
+        "effect": "Leaps up and crashes down, splashing damage around her."
+      },
+      {
+        "name": "Power Gradation",
+        "effect": "Unleashes her full gradation in a devastating combo."
+      }
+    ],
+    "counters": [
+      "Ata",
+      "Biron",
+      "Wuyan",
+      "Dharma"
+    ]
+  },
+  {
+    "id": "chicha",
+    "name": "Chicha",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "transform",
+      "burst",
+      "duelist"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "The Opener (unverified)",
+        "effect": "Opens her assault, shifting into a new weapon form."
+      },
+      {
+        "name": "The Dash (unverified)",
+        "effect": "Dashes forward, changing her stance mid-move."
+      },
+      {
+        "name": "The Finisher (unverified)",
+        "effect": "Finishes her combo with a powerful weapon-form strike."
+      }
+    ],
+    "counters": [
+      "Liang",
+      "Donghuang"
+    ],
+    "note": "Transforms through five weapon forms; exact skill naming is unverified."
+  },
+  {
+    "id": "cirrus",
+    "name": "Cirrus",
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "assassin",
+      "mobility",
+      "cc",
+      "jungle"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Through the Clouds",
+        "effect": "Passive. Moves like a cloud, gaining speed and bonus damage after using skills."
+      },
+      {
+        "name": "Cloud Descending",
+        "effect": "Descends from the clouds onto enemies, dealing damage on landing."
+      },
+      {
+        "name": "Razor Wind",
+        "effect": "Sends razor-sharp winds cutting through enemies in a line."
+      },
+      {
+        "name": "Soaring Whirlwind",
+        "effect": "Becomes a soaring whirlwind, dealing repeated damage to nearby enemies."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "consort-yu",
+    "name": "Consort Yu",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "cc",
+      "damage-immunity",
+      "kite"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Blessing of the Dryads",
+        "effect": "Passive. Her basic attacks can strike twice and slow; high attack speed enhances her other skills."
+      },
+      {
+        "name": "Oak Bolt",
+        "effect": "Fires piercing bolts that cast faster as her attack speed grows."
+      },
+      {
+        "name": "Protecting Winds",
+        "effect": "Calls protective winds that make her immune to physical damage for a short time."
+      },
+      {
+        "name": "Vaulting Shot",
+        "effect": "Vaults and fires a fan of bolts, up to six at high attack speed."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "da-qiao",
+    "name": "Da Qiao",
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "roles": [
+      "Roaming",
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "teleport",
+      "cc",
+      "support",
+      "mobility"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Law of Infinity",
+        "effect": "Passive. Grants movement speed to herself and nearby teammates; overlapping tides deal bonus damage."
+      },
+      {
+        "name": "Leaping Koi Tide",
+        "effect": "Launches enemies in a line, leaving a tide that deals continuous damage."
+      },
+      {
+        "name": "Sea of Fate",
+        "effect": "Conjures a circle that teleports her and an ally back to base, restoring mana."
+      },
+      {
+        "name": "Eye of the Whirlpool",
+        "effect": "Conjures a circle that damages enemies and lets teammates teleport to it."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "daji",
+    "name": "Daji",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "burst",
+      "cc",
+      "poke"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Captivate",
+        "effect": "Passive. Her skills charm enemies, reducing their magic defense."
+      },
+      {
+        "name": "Soul Impact",
+        "effect": "Fires a wave of soul energy, damaging enemies in a line."
+      },
+      {
+        "name": "Strike a Pose",
+        "effect": "Strikes a pose that stuns nearby enemies."
+      },
+      {
+        "name": "Heartbreaker",
+        "effect": "Unleashes hearts of energy that home in on enemies for heavy burst damage."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "dharma",
+    "name": "Dharma",
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "cc",
+      "dash",
+      "wall-stun",
+      "tank"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Heart Meridian Mantra",
+        "effect": "Passive. Using skills grants a stacking shield and bonus defenses, and empowers his next basic attack."
+      },
+      {
+        "name": "Formlessness Mantra",
+        "effect": "Charges forward with a punch that knocks enemies up."
+      },
+      {
+        "name": "Enlightenment Mantra",
+        "effect": "Strikes enemies ahead with a flurry of rapid punches."
+      },
+      {
+        "name": "Truth Mantra",
+        "effect": "Kicks enemies back; those slammed into a wall are stunned."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "di-renjie",
+    "name": "Di Renjie",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "mixed",
+    "range": "ranged",
+    "traits": [
+      "kite",
+      "attack-speed",
+      "purify",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Swift Justice",
+        "effect": "Passive. Basic attacks stack attack speed and movement speed; every third attack fires a special card."
+      },
+      {
+        "name": "Respect the Law",
+        "effect": "Flings tokens in a fan, dealing physical and magical damage to enemies hit."
+      },
+      {
+        "name": "Legal Immunity",
+        "effect": "Throws tokens around himself, removing debuffs and turning briefly invisible."
+      },
+      {
+        "name": "Imperial Order",
+        "effect": "Flings a token that stuns the first enemy hero hit and lowers their defenses."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "dian-wei",
+    "name": "Dian Wei",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "mixed",
+    "range": "melee",
+    "traits": [
+      "true-damage",
+      "sustain",
+      "berserk",
+      "jungle"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Mounting Rage",
+        "effect": "Passive. Gains permanent physical attack stacks from kills and assists."
+      },
+      {
+        "name": "Holding on to Sanity",
+        "effect": "Removes control effects on himself and gains a burst of movement speed."
+      },
+      {
+        "name": "Outburst",
+        "effect": "Boosts his attack speed, damaging nearby enemies and healing from the hits."
+      },
+      {
+        "name": "Leap of Fury",
+        "effect": "Leaps to enemies, dealing true damage and sticking to his target."
+      }
+    ],
+    "counters": [
+      "Mi Yue",
+      "Angela",
+      "Yuhuan",
+      "Liang",
+      "Butterfly",
+      "Zhou Yu"
+    ]
+  },
+  {
+    "id": "diaochan",
+    "name": "Diaochan",
+    "class": [
+      "Mage",
+      "Assassin"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "mixed",
+    "range": "ranged",
+    "traits": [
+      "true-damage",
+      "mobility",
+      "dance",
+      "sustain"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Explosion of Fragrance",
+        "effect": "Passive. Her skills apply Flower Seals; at four stacks they burst for true damage and heal her."
+      },
+      {
+        "name": "Returning Lotus",
+        "effect": "Throws a blossom ball that damages enemies on its way out and back."
+      },
+      {
+        "name": "Petals in the Wind",
+        "effect": "Dashes to a target, dealing damage and briefly becoming untargetable."
+      },
+      {
+        "name": "Flowery Potential",
+        "effect": "Conjures a circle that drastically cuts her cooldowns while she stays inside it."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "dolia",
+    "name": "Dolia",
+    "class": [
+      "Support"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "cooldown-reset",
+      "heal",
+      "cc",
+      "support"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Mermaid's Gift",
+        "effect": "Passive. Gains bonus movement and regeneration while she stays in the river."
+      },
+      {
+        "name": "Ode",
+        "effect": "Sings a note that knocks back and slows enemies."
+      },
+      {
+        "name": "Wavebreaker",
+        "effect": "Sends a wave of song that heals nearby teammates."
+      },
+      {
+        "name": "Celestial Melody",
+        "effect": "Resets her allies' ultimate and skill cooldowns."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "donghuang",
+    "name": "Donghuang",
+    "class": [
+      "Support",
+      "Tank"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "suppression",
+      "sustain",
+      "cc",
+      "support"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Soul Sacrifice",
+        "effect": "Passive. His dark orbs restore his health when they damage enemies."
+      },
+      {
+        "name": "Eclipse",
+        "effect": "Summons dark orbs that orbit him, damaging nearby enemies."
+      },
+      {
+        "name": "Dark Impact",
+        "effect": "Launches his orbs forward to strike enemies at range."
+      },
+      {
+        "name": "Forsaken Contract",
+        "effect": "Suppresses an enemy hero, sharing damage with them."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "dr-bian",
+    "name": "Dr Bian",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "poison",
+      "dot",
+      "heal",
+      "sustain"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Malicious Practice",
+        "effect": "Passive. His attacks and skills stack poison on enemies and recovery marks on allies."
+      },
+      {
+        "name": "Deadly Panacea",
+        "effect": "Throws a poison bottle that creates a damaging, slowing cloud."
+      },
+      {
+        "name": "Fatal Diagnosis",
+        "effect": "Heals nearby allies while poisoning nearby enemies."
+      },
+      {
+        "name": "Master of Life",
+        "effect": "Detonates all poison stacks for burst damage and heals his allies."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "dun",
+    "name": "Dun",
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane",
+      "Roaming"
+    ],
+    "damageType": "mixed",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "shield",
+      "cc",
+      "true-damage",
+      "dive"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Unyielding Night",
+        "effect": "Passive. Below half health, his attacks and skills heal him for a short time."
+      },
+      {
+        "name": "Wind Slash",
+        "effect": "Releases a gust that damages, slows, and launches enemies."
+      },
+      {
+        "name": "Gale's Benediction",
+        "effect": "Deals damage and gains a shield; his next attacks deal true damage."
+      },
+      {
+        "name": "Unruly Blade",
+        "effect": "Throws his chain blade to stun, then pulls himself to it with crowd-control immunity."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "dunshan",
+    "name": "Dunshan",
+    "class": [
+      "Support"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "shield",
+      "protection",
+      "support"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Guardian Shield (unverified)",
+        "effect": "Raises a shield that blocks incoming projectiles."
+      },
+      {
+        "name": "Shield Dash (unverified)",
+        "effect": "Dashes forward and hurls her shield at enemies."
+      },
+      {
+        "name": "Barrier Ward (unverified)",
+        "effect": "Deploys a barrier that protects allies behind it."
+      }
+    ],
+    "counters": null,
+    "note": "New hero (September 2026); data is still thin and skill names are unverified."
+  },
+  {
+    "id": "dyadia",
+    "name": "Dyadia",
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "heal",
+      "gold-steal",
+      "cc",
+      "support"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Melodic Swing",
+        "effect": "Passive. Periodically empowers her basic attack to knock enemies back; her skills earn bonus gold."
+      },
+      {
+        "name": "Heartlink",
+        "effect": "Blesses a teammate with a healing fated bond, and can dash to them to trigger it."
+      },
+      {
+        "name": "Bitter Farewell",
+        "effect": "Marks an enemy with a bitter bond that steals gold and can immobilize them."
+      },
+      {
+        "name": "Destined Encounter",
+        "effect": "Sends wisps forward that heal allies and damage enemies in their path."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "erin",
+    "name": "Erin",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "magical-marksman",
+      "energy",
+      "poke"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Elf Dance",
+        "effect": "Passive. Her attacks build energy; at full energy she speeds up and empowers her next attack."
+      },
+      {
+        "name": "Dance - Leaf Greeting",
+        "effect": "Shoots a leaf that damages and slows, then forms a damaging circle."
+      },
+      {
+        "name": "Twirl - Forest Whisper",
+        "effect": "Recovers full energy, gaining slow immunity and attack speed."
+      },
+      {
+        "name": "Waltz - Laurel Blossom",
+        "effect": "Consumes laurels to deal damage and gain movement speed."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "fang",
+    "name": "Fang",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane",
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "mark",
+      "burst",
+      "dash",
+      "split-push"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Going Undercover",
+        "effect": "Passive. Detects nearby enemy heroes and deals bonus damage to monsters and minions."
+      },
+      {
+        "name": "Target Sighted",
+        "effect": "Marks a target; attacks stack marks that explode for area damage, while he gains attack speed and range."
+      },
+      {
+        "name": "Wheel Away",
+        "effect": "Dashes away, becoming briefly untargetable during the move."
+      },
+      {
+        "name": "Bladestorm",
+        "effect": "Unleashes a storm of blades that repeatedly damages nearby enemies."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "fatih",
+    "name": "Fatih",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "sustain",
+      "cc",
+      "duelist"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Only the Strong",
+        "effect": "Passive. Grows stronger as he fights, gaining bonus damage and defense."
+      },
+      {
+        "name": "The King's Blade",
+        "effect": "Slashes with his royal blade, dealing heavy damage to enemies ahead."
+      },
+      {
+        "name": "The King's Return",
+        "effect": "Returns to the fray, dashing to enemies and striking them."
+      },
+      {
+        "name": "Sacred Tree Blessing",
+        "effect": "Calls on the sacred tree's blessing, empowering himself and shielding nearby allies."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "feyd",
+    "name": "Feyd",
+    "class": [
+      "Assassin"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "assassin",
+      "mobility",
+      "burst",
+      "jungle"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Jade Perch - View from Above",
+        "effect": "Passive. Surveys from above, marking enemies to take bonus damage."
+      },
+      {
+        "name": "Jade Chase - Whirling Strike",
+        "effect": "Chases his target with a whirling strike, damaging enemies."
+      },
+      {
+        "name": "Stepping on Jade",
+        "effect": "Steps swiftly across the field, repositioning and dodging danger."
+      },
+      {
+        "name": "Hardened Jade Mark",
+        "effect": "Marks an enemy with hardened jade, then detonates it for burst damage."
+      }
+    ],
+    "counters": null
+  },
+  {
+    "id": "flowborn",
+    "name": "Flowborn",
+    "class": [
+      "Custom"
+    ],
+    "roles": [
+      "Clash Lane",
+      "Farm Lane",
+      "Mid Lane",
+      "Jungle",
+      "Roaming"
+    ],
+    "damageType": "mixed",
+    "range": null,
+    "traits": [
+      "customizable",
+      "adaptive",
+      "flex"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Adaptive Form (unverified)",
+        "effect": "Flowborn is your customizable avatar; choose one of five combat forms before the match."
+      },
+      {
+        "name": "Flow Mechanic (unverified)",
+        "effect": "Chaining skills builds Flow, resetting cooldowns and adapting abilities to the situation."
+      },
+      {
+        "name": "Form Ultimate (unverified)",
+        "effect": "Unleashes a powerful ultimate tailored to the active form, such as the Assassin's dashing burst."
+      }
+    ],
+    "counters": null,
+    "note": "Single entry for all five classes (Tank, Marksman, Mage, Assassin, Roamer); Assassin and Roamer forms released 23 September 2026. Exact skill names vary per form and are unverified."
+  },
+  {
+    "id": "fuzi",
+    "name": "Fuzi",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "duelist",
+      "cc",
+      "split-push",
+      "sustain"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Ancient Wisdom",
+        "effect": "Passive. His experience grants bonus defenses that grow as he levels."
+      },
+      {
+        "name": "Corporal Punishment",
+        "effect": "Pulls an enemy back with his ruler, slowing them."
+      },
+      {
+        "name": "Intuition",
+        "effect": "Reduces incoming damage and empowers his basic attacks."
+      },
+      {
+        "name": "Sage's Might",
+        "effect": "Binds an enemy in place with the sage's authority."
+      }
+    ],
+    "counters": [
+      "Lian Po",
+      "Charlotte",
+      "Guan Yu",
+      "Dun"
+    ]
+  },
+  {
+    "id": "gan-mo",
+    "name": "Gan & Mo",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "burst",
+      "cc",
+      "mobility"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Forever Entwined",
+        "effect": "Passive: basic attacks deal bonus damage and flying swords mark targets with Sword Energy to take extra damage."
+      },
+      {
+        "name": "Guard Her Grave",
+        "effect": "Fires a splitting sword while dashing back, knocking enemies back and reducing their magic defense."
+      },
+      {
+        "name": "Coupled Blades - Short",
+        "effect": "Throws a flying sword that damages enemies in its path."
+      },
+      {
+        "name": "Freshly Forged",
+        "effect": "Refreshes and empowers flying sword skills and passively extends vision, with hits reducing its cooldown."
+      }
+    ],
+    "counters": [
+      "Sun Ce",
+      "Li Xin",
+      "Kaizer"
+    ]
+  },
+  {
+    "id": "gao",
+    "name": "Gao",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "sustain",
+      "mobility",
+      "aoe",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Guitar Solo",
+        "effect": "Passive: every 3 attacks or skills empowers his next basic attack."
+      },
+      {
+        "name": "Wild Chord",
+        "effect": "Launches musical notes that bounce between enemies dealing damage."
+      },
+      {
+        "name": "String Bender",
+        "effect": "Damages and slows nearby enemies, healing on hero hits and gaining damage reduction while dashing."
+      },
+      {
+        "name": "Rock Out!",
+        "effect": "Gains movement speed and damage reduction while dealing continuous damage around him."
+      }
+    ],
+    "counters": [
+      "Li Xin",
+      "Kaizer",
+      "Dun"
+    ]
+  },
+  {
+    "id": "garo",
+    "name": "Garo",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "attack-speed",
+      "silence",
+      "cc",
+      "anti-shield"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Piercing Arrow",
+        "effect": "Passive: basic attacks and skills deal 50% bonus damage to shields."
+      },
+      {
+        "name": "Enchanted Arrows",
+        "effect": "Toggles enhanced arrows with longer range and damage-over-time at a mana cost, or a speed boost when unenhanced."
+      },
+      {
+        "name": "Silent Arrow",
+        "effect": "Fires an arrow that silences and slows enemies, striking again after a delay."
+      },
+      {
+        "name": "Sphere of Purity",
+        "effect": "Creates a zone boosting her movement speed and crit rate, exploding for damage when destroyed."
+      }
+    ],
+    "counters": [
+      "Lapulapu",
+      "Bai Qi"
+    ]
+  },
+  {
+    "id": "garuda",
+    "name": "Garuda",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "aoe",
+      "shield",
+      "mobility",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Keen Feathers",
+        "effect": "Passive: basic attacks pierce through enemies in their path."
+      },
+      {
+        "name": "Arrows of Gold",
+        "effect": "Conjures an arrow formation dealing continuous damage and slow in an area."
+      },
+      {
+        "name": "Golden Winged Blessing",
+        "effect": "Gains movement speed and a shield while damaging nearby enemies."
+      },
+      {
+        "name": "Wings of Judgment",
+        "effect": "Rains arrows forward and can recast to blast nearby enemies, applying Dread and stripping their bonus physical attack."
+      }
+    ],
+    "counters": [
+      "Li Xin",
+      "Kaizer",
+      "Dun"
+    ]
+  },
+  {
+    "id": "guan-yu",
+    "name": "Guan Yu",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "cc",
+      "dive",
+      "tank"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Rider of Triumph",
+        "effect": "Passive: moving builds speed until he enters an empowered Charge Stance."
+      },
+      {
+        "name": "Heroic Charge",
+        "effect": "Damages nearby enemies, or charges forward knocking enemies back in Charge Stance."
+      },
+      {
+        "name": "Soaring Green Dragon",
+        "effect": "Cleanses crowd control and gains speed, or leaps forward knocking enemies back in Charge Stance."
+      },
+      {
+        "name": "Razor Cavalry",
+        "effect": "Lowers the distance needed for Charge Stance and summons cavalry that trample and knock back enemies."
+      }
+    ],
+    "counters": [
+      "Hou Yi",
+      "Marco Polo",
+      "Lady Sun"
+    ]
+  },
+  {
+    "id": "guiguzi",
+    "name": "Guiguzi",
+    "class": [
+      "Support"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "stealth",
+      "cc",
+      "pull",
+      "shield",
+      "mobility"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "The Laws of Nature",
+        "effect": "Passive: after leaving enemy vision, his next basic attack deals bonus damage and slows."
+      },
+      {
+        "name": "Prophecy - Hidden Hand",
+        "effect": "Gains speed and camouflage, reducing the defenses of enemies he touches while damaging them."
+      },
+      {
+        "name": "The Animist",
+        "effect": "After a delay, pulls nearby enemies together, stunning and damaging them and shielding allies on hero hit."
+      },
+      {
+        "name": "Prophecy - Out of Sight",
+        "effect": "Camouflages himself and nearby allies with bonus speed and reveals the nearest enemy hero."
+      }
+    ],
+    "counters": [
+      "Fatih",
+      "Wukong",
+      "Musashi"
+    ]
+  },
+  {
+    "id": "han-xin",
+    "name": "Han Xin",
+    "class": [
+      "Assassin"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "cc",
+      "dive",
+      "dash",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Killing Spear",
+        "effect": "Passive: every 4th basic attack launches the target and skill hits grant attack speed."
+      },
+      {
+        "name": "Ruthless Assault",
+        "effect": "Leaps to a location dealing damage and launching enemies, with a second charge."
+      },
+      {
+        "name": "Fight or Die!",
+        "effect": "Dashes backward and empowers his next basic attack for bonus damage."
+      },
+      {
+        "name": "The Unrivaled Spear",
+        "effect": "Swings his spear 4 times with damage reduction and CC immunity, launching enemies on the final hit."
+      }
+    ],
+    "counters": [
+      "Agudo",
+      "Alessio",
+      "Erin"
+    ]
+  },
+  {
+    "id": "haya",
+    "name": "Haya",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "cc",
+      "shield",
+      "mobility",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Moon's Farewell",
+        "effect": "Passive: skills consume moon crystals and mark enemies; spending all crystals empowers her next basic attack."
+      },
+      {
+        "name": "Crescent Wave",
+        "effect": "Fires a moonlight beam that deals bonus damage to marked targets."
+      },
+      {
+        "name": "Wayward Rays",
+        "effect": "Releases orbs that damage enemies while granting her a shield and speed, stunning marked targets."
+      },
+      {
+        "name": "Moonscape Mirage",
+        "effect": "Links to a hero for damage reduction, then enters a mirage gaining a shield and shorter cooldowns with a reposition dash."
+      }
+    ],
+    "counters": [
+      "Li Xin",
+      "Kaizer",
+      "Dun"
+    ]
+  },
+  {
+    "id": "heino",
+    "name": "Heino",
+    "class": [
+      "Mage",
+      "Fighter"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "sustain",
+      "burst",
+      "mobility",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Fate's Guidance",
+        "effect": "Passive: basic attacks differ between melee and ranged modes and skills mark enemies."
+      },
+      {
+        "name": "Scepter of Fate",
+        "effect": "Attacks in a direction, dealing bonus damage to marked targets and healing in melee mode."
+      },
+      {
+        "name": "Leap of Fate",
+        "effect": "Dashes and switches attack mode, gaining defenses and healing near enemies or speed at range."
+      },
+      {
+        "name": "Fate Rewind",
+        "effect": "Becomes immobile with damage reduction and CC immunity, dealing magic damage, healing, and rewinding his position."
+      }
+    ],
+    "counters": [
+      "Butterfly",
+      "Dharma",
+      "Lu Bu"
+    ]
+  },
+  {
+    "id": "hou-yi",
+    "name": "Hou Yi",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "attack-speed",
+      "cc",
+      "aoe",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Chastising Shot",
+        "effect": "Passive: basic attack hits stack attack speed, eventually firing multiple shots per attack."
+      },
+      {
+        "name": "Arrow Volley",
+        "effect": "Boosts basic attack damage and fires extra arrows hitting multiple enemies."
+      },
+      {
+        "name": "Afterglow",
+        "effect": "Deals area damage and slows enemies in an area."
+      },
+      {
+        "name": "Burning Sun Arrow",
+        "effect": "Fires a long-range arrow that stuns its target and deals area damage with slow."
+      }
+    ],
+    "counters": [
+      "Agudo",
+      "Luban No.7"
+    ]
+  },
+  {
+    "id": "huang-zhong",
+    "name": "Huang Zhong",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "burst",
+      "aoe",
+      "cc",
+      "shield",
+      "attack-speed"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Gunner's Spirit",
+        "effect": "Passive: basic attacks increase his physical attack and crit rate."
+      },
+      {
+        "name": "Unleash Your Potential",
+        "effect": "Gains movement speed and permanently gains physical attack."
+      },
+      {
+        "name": "Lay the Mines",
+        "effect": "Places a trap that grants vision and inflicts damage, slow, sunder, and a shield on trigger."
+      },
+      {
+        "name": "Bring out the Artillery",
+        "effect": "Deploys an immobile turret with bonus range and defenses whose basic attacks deal area damage."
+      }
+    ],
+    "counters": [
+      "Kaizer",
+      "Dun",
+      "Arthur"
+    ]
+  },
+  {
+    "id": "jing",
+    "name": "Jing",
+    "class": [
+      "Assassin"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "burst",
+      "cc",
+      "sustain",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Lethal Reflections",
+        "effect": "Passive: she and her mirror image apply two mark types; enemies with both take damage and reset her basic cooldowns."
+      },
+      {
+        "name": "Reflective Assault",
+        "effect": "Dashes forward damaging and slowing enemies while empowering her next basic attack and creating a mirror image."
+      },
+      {
+        "name": "Shattered Illusions",
+        "effect": "Damages nearby enemies while healing herself and gaining speed, creating a mirror image if none exists."
+      },
+      {
+        "name": "Mirror Domain",
+        "effect": "Dashes forward pulling enemies into her circle and immobilizing them while she gains damage reduction."
+      }
+    ],
+    "counters": [
+      "Angela",
+      "Daji",
+      "Gan & Mo"
+    ]
+  },
+  {
+    "id": "kaizer",
+    "name": "Kaizer",
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "sustain",
+      "burst",
+      "mobility",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Demon Soul",
+        "effect": "Passive: basic attacks and Skill 2 deal bonus damage to single targets."
+      },
+      {
+        "name": "Vortex Brand",
+        "effect": "Throws a ricocheting blade that damages and slows, returning to heal him and grant speed and attack speed."
+      },
+      {
+        "name": "Blade Tempest",
+        "effect": "Slashes twice, launching enemies on the second slash and empowering his next basic attack."
+      },
+      {
+        "name": "Invincible Warrior",
+        "effect": "Transforms to gain max health, attack, and speed while blocking damage and burning nearby enemies."
+      }
+    ],
+    "counters": [
+      "Donghuang",
+      "Kui",
+      "Sun Bin"
+    ]
+  },
+  {
+    "id": "kongming",
+    "name": "Kongming",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "burst",
+      "mobility",
+      "poke",
+      "execute"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Time for Tactics",
+        "effect": "Passive: skill hits build stacks that summon prisms to attack nearby enemies at max stacks."
+      },
+      {
+        "name": "Arcane Assault",
+        "effect": "Fires 3 prisms in a cone dealing damage."
+      },
+      {
+        "name": "Time Shift",
+        "effect": "Teleports, damaging enemies near the start and end points."
+      },
+      {
+        "name": "Winning Strategy",
+        "effect": "Channels a Spirit Bomb dealing heavy damage, refunding 80% cooldown on kill."
+      }
+    ],
+    "counters": [
+      "Allain",
+      "Biron",
+      "Wuyan"
+    ]
+  },
+  {
+    "id": "kui",
+    "name": "Kui",
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "pull",
+      "cc",
+      "tank",
+      "aoe"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Ethereal Outburst",
+        "effect": "Passive: deals area damage when taking a heavy hit or after dying."
+      },
+      {
+        "name": "Mortals!",
+        "effect": "Damages and slows nearby enemies, marking those in the inner circle for bonus damage."
+      },
+      {
+        "name": "Join Me",
+        "effect": "Throws a chain hook that pulls the target back, damaging and marking them, passively stacking health on takedowns."
+      },
+      {
+        "name": "Into the Void",
+        "effect": "Repeatedly damages and slows enemies in range, upgrading the slow to a stun on marked heroes."
+      }
+    ],
+    "counters": [
+      "Wukong",
+      "Musashi",
+      "Ying"
+    ]
+  },
+  {
+    "id": "lady-sun",
+    "name": "Lady Sun",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "mobility",
+      "burst",
+      "poke",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Energy Burst",
+        "effect": "Passive: basic attacks reduce her Skill 1 cooldown."
+      },
+      {
+        "name": "Rolling Raid",
+        "effect": "Rolls forward gaining an enhanced piercing basic attack with bonus range and speed near enemies."
+      },
+      {
+        "name": "Frag Grenade",
+        "effect": "Throws a grenade that damages and marks enemies, reducing their physical defense for bonus basic attack damage."
+      },
+      {
+        "name": "Ultimate Shell",
+        "effect": "Fires a long shot dealing area damage on hit or at max range."
+      }
+    ],
+    "counters": [
+      "Kaizer",
+      "Dun",
+      "Arthur"
+    ]
+  },
+  {
+    "id": "lady-zhen",
+    "name": "Lady Zhen",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "cc",
+      "aoe",
+      "burst",
+      "invulnerable"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Frozen Touch",
+        "effect": "Passive: hitting an enemy with skills 3 times deals bonus damage and freezes them."
+      },
+      {
+        "name": "Ocean of Tears",
+        "effect": "Conjures icicles that launch enemies, freezing herself invincible if nearby, then shattering for damage."
+      },
+      {
+        "name": "Flowing Sigh",
+        "effect": "Unleashes a water orb that damages enemies."
+      },
+      {
+        "name": "Destructive Deluge",
+        "effect": "Creates a water pool that damages and slows enemies within it."
+      }
+    ],
+    "counters": [
+      "Charlotte",
+      "Liu Bei",
+      "Luna"
+    ]
+  },
+  {
+    "id": "lam",
+    "name": "Lam",
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "true-damage",
+      "execute",
+      "sustain",
+      "dive"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Hunter",
+        "effect": "Passive: basic attacks and skills deal bonus true damage to low-health targets."
+      },
+      {
+        "name": "Wavebreaker",
+        "effect": "Submerges for movement speed and can recast to dash and deal damage, staying hidden in rivers."
+      },
+      {
+        "name": "Space Split",
+        "effect": "Damages nearby enemies gaining marks that empower basic attacks with dashes and healing."
+      },
+      {
+        "name": "Death From Below",
+        "effect": "Throws a dagger then dashes to it, dragging enemies in his path and dealing damage."
+      }
+    ],
+    "counters": [
+      "Erin",
+      "Liang",
+      "Luara"
+    ]
+  },
+  {
+    "id": "li-bai",
+    "name": "Li Bai",
+    "class": [
+      "Assassin"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "invulnerable",
+      "burst",
+      "cc",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Way of the Sword",
+        "effect": "Passive: basic attacks grant stacks that boost physical attack and unlock his ultimate at 4 stacks."
+      },
+      {
+        "name": "Stupor Slash",
+        "effect": "Dashes leaving an afterimage, stunning and damaging enemies, and can return to the afterimage."
+      },
+      {
+        "name": "Stroke of Genius",
+        "effect": "Cleanses himself and becomes untargetable while damaging and slowing enemies in a sword formation."
+      },
+      {
+        "name": "Flickering Flurry",
+        "effect": "Becomes a phantom slashing an area repeatedly while untargetable and cleansed."
+      }
+    ],
+    "counters": [
+      "Garo",
+      "Mozi",
+      "Shi"
+    ]
+  },
+  {
+    "id": "li-xin",
+    "name": "Li Xin",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "burst",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Ashen Razor",
+        "effect": "Passive: hitting heroes with basic attacks and sword energy grants bonus experience."
+      },
+      {
+        "name": "Lightning Dash",
+        "effect": "Dashes forward in light form."
+      },
+      {
+        "name": "Chaos Wave",
+        "effect": "Unleashes sword energy that damages and slows the target."
+      },
+      {
+        "name": "Dark Awakening",
+        "effect": "Uninterruptibly transforms into Revenge form with enhanced combat power."
+      }
+    ],
+    "counters": [
+      "Cai Yan",
+      "Da Qiao",
+      "Guiguzi"
+    ]
+  },
+  {
+    "id": "lian-po",
+    "name": "Lian Po",
+    "class": [
+      "Tank"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "cc",
+      "mobility",
+      "sustain"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Warrior's Soul",
+        "effect": "Passive: gains CC immunity while casting and builds Battle Spirit in combat for damage reduction and attack speed, healing out of combat."
+      },
+      {
+        "name": "Burst Ram",
+        "effect": "Dashes dealing damage and launching enemies, later empowering every 3rd basic attack."
+      },
+      {
+        "name": "Magma Slam",
+        "effect": "Charges up gaining a shield and slowing nearby enemies, then slams for area damage and resets Skill 1."
+      },
+      {
+        "name": "Tremor Smash",
+        "effect": "Leaps and hammers the ground 3 times, slowing then launching enemies."
+      }
+    ],
+    "counters": [
+      "Jing",
+      "Li Bai",
+      "Ukyo Tachibana"
+    ]
+  },
+  {
+    "id": "liang",
+    "name": "Liang",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "cc",
+      "burst",
+      "aoe"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Power Word - Trance",
+        "effect": "Passive: every second hit on the same target deals a bonus strike."
+      },
+      {
+        "name": "Power Word - Barrier",
+        "effect": "Summons 4 barriers that shatter on touch, stunning, slowing, and damaging enemies."
+      },
+      {
+        "name": "Power Word - Fate",
+        "effect": "Conjures a magic circle that damages enemies, grants vision, and speeds him inside it."
+      },
+      {
+        "name": "Power Word - Control",
+        "effect": "Suppresses an enemy hero dealing damage over time, then stunning nearby enemies."
+      }
+    ],
+    "counters": [
+      "Li Xin",
+      "Mayene",
+      "Mulan"
+    ]
+  },
+  {
+    "id": "liu-bang",
+    "name": "Liu Bang",
+    "class": [
+      "Tank",
+      "Mage"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "shield",
+      "tank",
+      "mobility",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Royal Ambition",
+        "effect": "Passive: builds marks over time that empower basic attacks with bonus magic damage, becoming ranged at max marks."
+      },
+      {
+        "name": "Dominator's Shield",
+        "effect": "Shields himself and detonates the remaining shield for damage when it expires."
+      },
+      {
+        "name": "Staggering Charge",
+        "effect": "Charges forward dashing through enemies, damaging and stunning them."
+      },
+      {
+        "name": "Battlefield Command",
+        "effect": "Shields an ally then teleports to them with bonus movement speed."
+      }
+    ],
+    "counters": [
+      "Wukong",
+      "Musashi",
+      "Ying"
+    ]
+  },
+  {
+    "id": "liu-bei",
+    "name": "Liu Bei",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "shield",
+      "burst",
+      "cc"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Reinforced Shells",
+        "effect": "Passive: basic attacks on heroes increase his physical pierce."
+      },
+      {
+        "name": "Dual Shot",
+        "effect": "Gains movement speed and empowers his next basic attack to strike twice."
+      },
+      {
+        "name": "Leading the Charge",
+        "effect": "Dashes forward damaging and knocking back enemies."
+      },
+      {
+        "name": "Hearts and Minds",
+        "effect": "Cleanses crowd control and gains physical attack, CC immunity, and a shield."
+      }
+    ],
+    "counters": [
+      "Dyadia"
+    ]
+  },
+  {
+    "id": "liu-shan",
+    "name": "Liu Shan",
+    "class": [
+      "Tank",
+      "Support"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "cc",
+      "shield",
+      "tank",
+      "mobility"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Magnetic Barrier",
+        "effect": "Passive: skills deal bonus damage to structures and disrupt them while healing him."
+      },
+      {
+        "name": "Overcharge!",
+        "effect": "Gains a shield and speed while empowering his next basic attack to damage and launch enemies."
+      },
+      {
+        "name": "Robo Smash",
+        "effect": "Damages and stuns enemies in a target area."
+      },
+      {
+        "name": "Take It for a Spin",
+        "effect": "Spins continuously damaging nearby enemies while basic attacks slow targets."
+      }
+    ],
+    "counters": [
+      "Li Bai"
+    ]
+  },
+  {
+    "id": "loong",
+    "name": "Loong",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "sustain",
+      "cc",
+      "true-damage",
+      "mobility",
+      "poke",
+      "elemental dragon souls",
+      "untargetable flight"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Hidden Dragon",
+        "effect": "Passive: recent skill uses grant Dragon Souls that empower basic attacks to hit extra enemies."
+      },
+      {
+        "name": "Flaming Palm",
+        "effect": "Unleashes sword energy dealing physical and true damage, empowering subsequent basic attacks."
+      },
+      {
+        "name": "Downpour",
+        "effect": "Unleashes sword energy dealing physical damage and healing on hit, with basic attacks restoring health and mana."
+      },
+      {
+        "name": "Infinite Vastness",
+        "effect": "Soars and dives forward damaging and slowing enemies, applying Dread and letting basic attacks hit extra targets."
+      }
+    ],
+    "counters": [
+      "Kaizer",
+      "Dun",
+      "Arthur",
+      "Garo"
+    ],
+    "alias": [
+      "Ao'yin"
+    ]
+  },
+  {
+    "id": "lu-bu",
+    "name": "Lu Bu",
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "true-damage",
+      "lifesteal",
+      "shield",
+      "cc",
+      "tank",
+      "aoe"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Bloodthirsty Ancestry",
+        "effect": "Passive: hitting enemies with Skill 1 or ultimate enchants his weapon for bonus true damage and healing."
+      },
+      {
+        "name": "Impaling Thrust",
+        "effect": "Sweeps an area healing per hero hit, losing the enchantment if no hero is hit."
+      },
+      {
+        "name": "Souleater",
+        "effect": "Slows and damages enemies gaining a stacking shield that converts to health."
+      },
+      {
+        "name": "Tremble, Mortals",
+        "effect": "Leaps to a location launching and damaging enemies, creating a ring that boosts his defenses and slows enemies."
+      }
+    ],
+    "counters": [
+      "Han Xin",
+      "Lam",
+      "Pei"
+    ]
+  },
+  {
+    "id": "luara",
+    "name": "Luara",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "mobility",
+      "cc",
+      "burst",
+      "aoe",
+      "attack-speed"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Serpent's Envoy",
+        "effect": "Passive: basic attacks unleash a serpent blade and skill uses boost her attack speed."
+      },
+      {
+        "name": "Deadly Fang",
+        "effect": "Activates a serpent blade with bonus speed and lets her quickly scale walls."
+      },
+      {
+        "name": "Furtive Attack",
+        "effect": "Summons a Fire Serpent that travels toward her, damaging and slowing enemies in its path."
+      },
+      {
+        "name": "Blazing Glare",
+        "effect": "Releases the Fire Serpent dealing damage and blinding enemies, then empowers her to build Energy for an area launch."
+      }
+    ],
+    "counters": [
+      "Lapulapu",
+      "Ata"
+    ]
+  },
+  {
+    "id": "luban-no7",
+    "name": "Luban No.7",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "aoe",
+      "cc",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Suppressive Fire",
+        "effect": "Passive: after 4 basic attacks or a skill, his next basic attack becomes piercing scattershot."
+      },
+      {
+        "name": "Blowfish Grenade",
+        "effect": "Throws a bomb dealing area damage and slow."
+      },
+      {
+        "name": "Shark Cannon",
+        "effect": "Fires a rocket knocking back nearby enemies and dealing area damage."
+      },
+      {
+        "name": "Air Support",
+        "effect": "Calls an airship bombardment dealing area damage and slow while granting vision."
+      }
+    ],
+    "counters": [
+      "Lian Po"
+    ]
+  },
+  {
+    "id": "luna",
+    "name": "Luna",
+    "class": [
+      "Mage",
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "cc",
+      "burst",
+      "shield",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Moonlight Dance",
+        "effect": "Passive: basic attacks alternate melee and ranged forms, marking enemies with enhanced attacks and skill damage."
+      },
+      {
+        "name": "Crescent Slice",
+        "effect": "Unleashes a shockwave that damages and marks enemies."
+      },
+      {
+        "name": "Searing Stab",
+        "effect": "Shields herself and pulls nearby enemies, stunning, slowing, and marking them."
+      },
+      {
+        "name": "New Moon",
+        "effect": "Dashes dealing damage and resets its cooldown when hitting marked enemies."
+      }
+    ],
+    "counters": [
+      "Athena",
+      "Augran",
+      "Fuzi"
+    ]
+  },
+  {
+    "id": "mai-shiranui",
+    "name": "Mai Shiranui",
+    "class": [
+      "Assassin",
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "burst",
+      "mobility",
+      "cc",
+      "dive",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "HISSATSU SHINOBI-BACHI",
+        "effect": "Passive: periodically gains an enhanced dashing basic attack that knocks back, followed by a repositioning roll."
+      },
+      {
+        "name": "HISHOU RYUUENJIN",
+        "effect": "Dashes forward launching and damaging enemies while recovering energy."
+      },
+      {
+        "name": "KACHOUSEN",
+        "effect": "Throws a fan that slows and damages a target, reducing magic defense and splashing magic damage behind."
+      },
+      {
+        "name": "CHOU HISSATSU SHINOBI-BACHI",
+        "effect": "Dashes forward knocking back and damaging enemies while reducing their physical attack."
+      }
+    ],
+    "counters": [
+      "Alessio",
+      "Charlotte",
+      "Di Renjie"
+    ]
+  },
+  {
+    "id": "marco-polo",
+    "name": "Marco Polo",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "mobility",
+      "true-damage",
+      "attack-speed",
+      "aoe",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Chain Reaction",
+        "effect": "Passive: attacks stack marks that detonate for true damage at max stacks, with attack speed adding bullets."
+      },
+      {
+        "name": "Resplendent Revolver",
+        "effect": "Strafes bullets in a direction while gaining movement speed."
+      },
+      {
+        "name": "Roaming Gun",
+        "effect": "Blinks and passively deals bonus damage with speed when enemies are near."
+      },
+      {
+        "name": "Fevered Barrage",
+        "effect": "Blinks dealing damage over time to surrounding enemies."
+      }
+    ],
+    "counters": [
+      "Lian Po",
+      "Liu Bang",
+      "Zhang Fei"
+    ]
+  },
+  {
+    "id": "mayene",
+    "name": "Mayene",
+    "class": [
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "cc",
+      "sustain",
+      "mobility",
+      "tank",
+      "burst"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Slack Off a Lil Bit",
+        "effect": "Passive: skills consume Strength that regenerates over time, faster while standing still along with health."
+      },
+      {
+        "name": "Whatever (I)",
+        "effect": "Charges and pulls enemies dealing area damage, with combos that launch or heal."
+      },
+      {
+        "name": "Whatever (II)",
+        "effect": "Flips forward with immunity and healing, with combos that blink behind enemies or leap back."
+      },
+      {
+        "name": "Get Serious",
+        "effect": "Damages nearby enemies and restores Strength, gaining max Strength and speed for 10s."
+      }
+    ],
+    "counters": [
+      "Yaria"
+    ]
+  },
+  {
+    "id": "meng-ya",
+    "name": "Meng Ya",
+    "class": [
+      "Marksman"
+    ],
+    "roles": [
+      "Farm Lane"
+    ],
+    "damageType": "physical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "aoe",
+      "sustain",
+      "burst",
+      "attack-speed"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Fiery Temper",
+        "effect": "Passive: attack speed reduces cooldowns and attacks build Anger that excites and empowers his skills at max."
+      },
+      {
+        "name": "Awesome Barrage",
+        "effect": "Strafes continuously with piercing bullets when excited."
+      },
+      {
+        "name": "Heavy Shot",
+        "effect": "Fires a heavy round that slows and splits into splinters on impact."
+      },
+      {
+        "name": "Missile Mayhem",
+        "effect": "Fires missiles at nearby enemies attacked by teammates, faster when excited."
+      }
+    ],
+    "counters": [
+      "Liu Bang"
+    ]
+  },
+  {
+    "id": "menki",
+    "name": "Menki",
+    "class": [
+      "Mage",
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "tank",
+      "sustain",
+      "shield",
+      "cc",
+      "aoe",
+      "mobility"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Dream-eating",
+        "effect": "Passive: using skills grants Mass that boosts his attack and defenses."
+      },
+      {
+        "name": "Lingering Dream",
+        "effect": "Gains Mass and a shield while damaging nearby enemies, with basic hits reducing its cooldown."
+      },
+      {
+        "name": "Dream Bubble",
+        "effect": "Throws a bouncing bubble that damages and slows, recastable as an exploding bomb."
+      },
+      {
+        "name": "Dream Roam",
+        "effect": "Flies in a circle dealing magic damage and gaining Mass, then launches to damage nearby enemies."
+      }
+    ],
+    "counters": [
+      "Ming",
+      "Sima Yi",
+      "Zhuangzi"
+    ]
+  },
+  {
+    "id": "mi-yue",
+    "name": "Mi Yue",
+    "class": [
+      "Mage",
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "magical",
+    "range": "melee",
+    "traits": [
+      "sustain",
+      "mobility",
+      "invulnerable",
+      "lifesteal",
+      "poke"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Eternal Youth",
+        "effect": "Passive: using skills summons shadow servants that damage enemies and heal her while boosting her speed and healing."
+      },
+      {
+        "name": "Dark Transfer",
+        "effect": "Sends shadow energy that damages enemies and can be recast to teleport to it for another hit."
+      },
+      {
+        "name": "Ravenous Tether",
+        "effect": "Links to an enemy draining health and stealing attack stats while slowing them."
+      },
+      {
+        "name": "Umbral Moon",
+        "effect": "Cleanses herself and becomes untargetable with bonus speed, damaging nearby enemies on entry and exit."
+      }
+    ],
+    "counters": [
+      "Cao Cao",
+      "Dharma",
+      "Dian Wei"
+    ]
+  },
+  {
+    "id": "milady",
+    "name": "Milady",
+    "class": [
+      "Mage"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "poke",
+      "cc",
+      "burst",
+      "split-push",
+      "aoe"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Mechanical Minions",
+        "effect": "Passive: killing units summons minions that attack and then merge or explode for damage."
+      },
+      {
+        "name": "Air Superiority",
+        "effect": "Commands an aircraft that damages enemies in its path and splits in two on recast."
+      },
+      {
+        "name": "Forced Invasion",
+        "effect": "Summons mechanical minions in an area that deal damage and auto-attack nearby enemies."
+      },
+      {
+        "name": "Chaos Field",
+        "effect": "Marks a target for damage over time, stunning and slowing non-structures and empowering nearby minions before detonating."
+      }
+    ],
+    "counters": [
+      "Allain",
+      "Fuzi",
+      "Haya"
+    ]
+  },
+  {
+    "id": "ming",
+    "name": "Ming",
+    "class": [
+      "Support"
+    ],
+    "roles": [
+      "Roaming"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "heal",
+      "shield",
+      "buff",
+      "true-damage"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Good Omens",
+        "effect": "Passive: every 5s his next basic attack deals magic damage and heals himself and his linked ally."
+      },
+      {
+        "name": "Time - Carefree",
+        "effect": "Links to an ally boosting their attack stat and attack speed while the link burns enemies."
+      },
+      {
+        "name": "Mastery - Glide",
+        "effect": "Links to an enemy reducing their defenses while the link burns them, passively gaining defenses."
+      },
+      {
+        "name": "Peace - Longevity",
+        "effect": "Channels then sacrifices health to deal true damage to a linked enemy or heal a linked ally."
+      }
+    ],
+    "counters": [
+      "Wukong",
+      "Musashi",
+      "Ying"
+    ]
+  },
+  {
+    "id": "mozi",
+    "name": "Mozi",
+    "class": [
+      "Mage",
+      "Fighter"
+    ],
+    "roles": [
+      "Mid Lane"
+    ],
+    "damageType": "magical",
+    "range": "ranged",
+    "traits": [
+      "cc",
+      "poke",
+      "shield",
+      "burst",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Fight for Peace",
+        "effect": "Passive: every 4th basic attack deals area damage and knocks back, while skills grant shield stacks."
+      },
+      {
+        "name": "Peacebringer",
+        "effect": "Dashes dealing damage and empowering his next basic attack."
+      },
+      {
+        "name": "Cannon Blast",
+        "effect": "Fires a shell that stuns and damages the first enemy hit, leaving a damaging crater."
+      },
+      {
+        "name": "Think Inside the Box",
+        "effect": "Repeatedly damages and stuns enemies around him over time."
+      }
+    ],
+    "counters": [
+      "Dolia",
+      "Guiguzi",
+      "Nezha"
+    ]
+  },
+  {
+    "id": "mulan",
+    "name": "Mulan",
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "roles": [
+      "Clash Lane"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "silence",
+      "burst",
+      "cc",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Great Wall Guardian",
+        "effect": "Passive: attacks apply marks that detonate at 5 stacks for damage, silence, and slow."
+      },
+      {
+        "name": "Snaking Strike",
+        "effect": "Dashes twice dealing damage and can recast on hit before cooldown."
+      },
+      {
+        "name": "Dagger Waltz",
+        "effect": "Throws a sword that slows and damages at max range, reducing cooldown when retrieved."
+      },
+      {
+        "name": "Blooming Blade",
+        "effect": "Damages nearby enemies with damage reduction and switches to heavy sword form with bonus attack."
+      }
+    ],
+    "counters": [
+      "Diaochan",
+      "Heino",
+      "Hou Yi"
+    ]
+  },
+  {
+    "id": "musashi",
+    "name": "Musashi",
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "roles": [
+      "Jungle"
+    ],
+    "damageType": "physical",
+    "range": "melee",
+    "traits": [
+      "mobility",
+      "cc",
+      "shield",
+      "burst",
+      "anti-heal",
+      "dash"
+    ],
+    "difficulty": null,
+    "skills": [
+      {
+        "name": "Niten Ichiryuu",
+        "effect": "Passive: skills generate Vigor that empowers basic attacks, with hits reducing basic cooldowns."
+      },
+      {
+        "name": "Illuminating Slash",
+        "effect": "Unleashes sword energy that destroys projectiles and grants CC immunity."
+      },
+      {
+        "name": "Extreme Speed",
+        "effect": "Dashes dealing damage and gaining a shield on hit."
+      },
+      {
+        "name": "Duel to the Death",
+        "effect": "Dashes to a target launching and damaging nearby enemies while delaying their healing."
+      }
+    ],
+    "counters": [
+      "Dyadia",
+      "Sun Bin"
+    ]
+  },
+  {
+    "class": [
+      "Assassin"
+    ],
+    "counters": null,
+    "damageType": "physical",
+    "difficulty": 3,
+    "id": "nakoruru",
+    "name": "Nakoruru",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Dancing Sword Arts (passive)",
+        "effect": "landing skill hits grants up to 3 enhanced basic-attack stacks; her next basic attack spends them to summon Mamahaha for AoE damage."
+      },
+      {
+        "name": "AMUBE YATORO",
+        "effect": "Mamahaha strikes a target, applying a 5-second mark; hitting a marked target detonates it for bonus max-HP damage, restores mana, and reduces this skill's cooldown."
+      },
+      {
+        "name": "RERA MUTSUBE",
+        "effect": "dashes in a targeted direction, dealing damage and healing per enemy hero hit; deals extra damage to monsters."
+      },
+      {
+        "name": "KAMUI MUTSUBE (ultimate)",
+        "effect": "leaving combat for 4 seconds grants movement speed; Mamahaha lifts her into the air for a speed boost and one terrain flight, then she dive-bombs an area, damaging, slowing, and weakening enemies."
+      }
+    ],
+    "traits": [
+      "burst",
+      "mobility"
+    ]
+  },
+  {
+    "class": [
+      "Fighter"
+    ],
+    "counters": [
+      "Sun Ce",
+      "Lu Bu"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "nezha",
+    "name": "Nezha",
+    "range": "melee",
+    "roles": [
+      "Clash Lane"
+    ],
+    "skills": [
+      {
+        "name": "Scorching Ember (passive)",
+        "effect": "skill hits grant a stacking True Shield plus stacking movement speed."
+      },
+      {
+        "name": "Fire-tipped Spear – Sweep",
+        "effect": "AoE spear sweep; leaves a burn that deals true damage over time and reduces enemy healing."
+      },
+      {
+        "name": "Red Armillary Sash – Bind",
+        "effect": "rolls behind a target for damage and a shield; his stick-to-target mobility tool."
+      },
+      {
+        "name": "Universe Ring – Skyfall (ultimate)",
+        "effect": "picks a target on the minimap and flies to it, knocking them back; gains damage reduction and tenacity, and can recast on hit heroes."
+      }
+    ],
+    "traits": [
+      "engage",
+      "chase",
+      "anti-heal/continuous pressure"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": null,
+    "damageType": "magical",
+    "difficulty": 7,
+    "id": "nuwa",
+    "name": "Nuwa",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Divine Consciousness (passive)",
+        "effect": "leveling up increases her vision and skill range."
+      },
+      {
+        "name": "Divine Glow – Creation",
+        "effect": "launches energy that damages and knocks back enemies, creating a matrix that expands for extra damage."
+      },
+      {
+        "name": "Divine Glow – Coalescence / Emergence",
+        "effect": "creates blocking matrices and teleports to them, gaining a shield, movement speed, damage, and slow."
+      },
+      {
+        "name": "Divine Glow – Annihilation (ultimate)",
+        "effect": "fires a long straight-line beam damaging enemies ahead."
+      }
+    ],
+    "traits": [
+      "artillery",
+      "terrain control",
+      "teleport"
+    ]
+  },
+  {
+    "class": [
+      "Assassin"
+    ],
+    "counters": [
+      "Ukyo Tachibana",
+      "Cirrus",
+      "Jing",
+      "Liu Bei"
+    ],
+    "damageType": "mixed",
+    "difficulty": 8,
+    "id": "pei",
+    "name": "Pei",
+    "range": "hybrid",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Blast / Beastly Instincts (passives)",
+        "effect": "human-form basics gain range and bonus magical damage; tiger form grants bonus attack, defenses, and speed."
+      },
+      {
+        "name": "Striker Stance / Guarding Stance (human skills)",
+        "effect": "fires inner energy for damage and slow; shield plus attack speed and AoE damage."
+      },
+      {
+        "name": "Tiger Form (ultimate)",
+        "effect": "transforms into a tiger with movement speed and two enhanced basics; gains a biting charge and a pounce that resets off terrain."
+      },
+      {
+        "name": "Human Form (ultimate)",
+        "effect": "transforms back with movement speed and enhanced ranged basics."
+      }
+    ],
+    "traits": [
+      "transformation",
+      "early pressure",
+      "mobility"
+    ]
+  },
+  {
+    "class": [
+      "Assassin"
+    ],
+    "counters": [
+      "Wukong",
+      "Cirrus",
+      "Zilong",
+      "Liu Bei"
+    ],
+    "damageType": "physical",
+    "difficulty": 5,
+    "id": "prince-of-lanling",
+    "name": "Prince of Lanling",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Secret Skill – Rush (passive)",
+        "effect": "moving toward nearby enemies increases his movement speed."
+      },
+      {
+        "name": "Secret Skill – Split",
+        "effect": "deals AoE damage, then a second strike hits a random nearby enemy."
+      },
+      {
+        "name": "Secret Skill – Sling",
+        "effect": "throws a dagger that slows and marks the first enemy in its path; attacking marked targets stuns them and heals him, and marks burst when they expire."
+      },
+      {
+        "name": "Secret Skill – Strike (ultimate)",
+        "effect": "exits stealth and dashes through enemies, damaging them in his path."
+      }
+    ],
+    "traits": [
+      "stealth",
+      "burst",
+      "chase"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": [
+      "Angela",
+      "Han Xin"
+    ],
+    "damageType": "magical",
+    "difficulty": 4,
+    "id": "princess-frost",
+    "name": "Princess Frost",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Frozen Heart (passive)",
+        "effect": "gains a shield out of combat that chills attackers; the broken shield damages nearby enemies, and every third basic attack is enhanced with chill."
+      },
+      {
+        "name": "Shattered Ice",
+        "effect": "damages and slows enemies in a target area while granting vision of them."
+      },
+      {
+        "name": "Frigid Prison",
+        "effect": "after a brief delay, freezes then slows enemies in the area; attacks on frozen targets deal extra damage."
+      },
+      {
+        "name": "Winter Is Here (ultimate)",
+        "effect": "continuously damages and slows enemies in the target area."
+      }
+    ],
+    "traits": [
+      "crowd control",
+      "burst",
+      "chill"
+    ]
+  },
+  {
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "counters": null,
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "sakeer",
+    "name": "Sakeer",
+    "range": "melee",
+    "roles": [
+      "Roaming"
+    ],
+    "skills": [
+      {
+        "name": "Firefly Protection (passive)",
+        "effect": "basics and skills summon fireflies for bonus damage and vision; periodically heals teammates; can charge his basic attack to heal himself."
+      },
+      {
+        "name": "Mulberry Power",
+        "effect": "frontal damage plus fireflies that heal teammates or damage enemies."
+      },
+      {
+        "name": "Ride the Wind",
+        "effect": "flies to a brush; fireflies heal teammates or damage enemies."
+      },
+      {
+        "name": "Firefly Fields (ultimate)",
+        "effect": "summons a brush he can fly into; it spawns fireflies over time that heal allies or damage enemies."
+      }
+    ],
+    "traits": [
+      "healing",
+      "fireflies",
+      "bush mobility",
+      "crowd control"
+    ]
+  },
+  {
+    "class": [
+      "Mage",
+      "Assassin"
+    ],
+    "counters": [
+      "Liang",
+      "Mai Shiranui",
+      "Arli"
+    ],
+    "damageType": "magical",
+    "difficulty": 10,
+    "id": "shangguan",
+    "name": "Shangguan",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Piercing Brush (passive)",
+        "effect": "brush hits apply ink stacks that amplify her damage."
+      },
+      {
+        "name": "Ink Burst",
+        "effect": "brush projectile damage."
+      },
+      {
+        "name": "Seething Script",
+        "effect": "ink zone with repeated damage."
+      },
+      {
+        "name": "Finishing Stroke (ultimate)",
+        "effect": "multi-dash untargetable burst."
+      }
+    ],
+    "traits": [
+      "burst",
+      "mobility",
+      "untargetability"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": null,
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "shi",
+    "name": "Shi",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Maiden's Trick (passive)",
+        "effect": "the farther away the enemy is, the more damage her skills deal."
+      },
+      {
+        "name": "Silk Imprint",
+        "effect": "throws her artifact, damaging enemies and pulling them toward it; recast pulls enemies in the target direction."
+      },
+      {
+        "name": "Silky Beauty",
+        "effect": "releases an energy orb that continuously damages enemies in range then explodes; slows on first hit."
+      },
+      {
+        "name": "Sole Focus (ultimate)",
+        "effect": "resets Skill 2's cooldown and enhances her; gains movement speed, halves Skill 2's cooldown, and Skill 1 can pull twice."
+      }
+    ],
+    "traits": [
+      "crowd control",
+      "range-scaled damage"
+    ]
+  },
+  {
+    "class": [
+      "Marksman"
+    ],
+    "counters": [
+      "Consort Yu",
+      "Di Renjie"
+    ],
+    "damageType": "physical",
+    "difficulty": 9,
+    "id": "shouyue",
+    "name": "Shouyue",
+    "range": "ranged",
+    "roles": [
+      "Farm Lane"
+    ],
+    "skills": [
+      {
+        "name": "Accuracy (passive)",
+        "effect": "converts attack into physical pierce."
+      },
+      {
+        "name": "The Tranquil Eye",
+        "effect": "places a vision device that reveals enemies and can camouflage him."
+      },
+      {
+        "name": "Wild Wind",
+        "effect": "charges a long-range piercing sniper shot."
+      },
+      {
+        "name": "Getaway (ultimate)",
+        "effect": "dashes backward, removes crowd control, and camouflages."
+      }
+    ],
+    "traits": [
+      "artillery",
+      "vision",
+      "camouflage"
+    ]
+  },
+  {
+    "class": [
+      "Assassin",
+      "Mage"
+    ],
+    "counters": [
+      "Liang",
+      "Mai Shiranui",
+      "Wukong"
+    ],
+    "damageType": "magical",
+    "difficulty": 7,
+    "id": "sima-yi",
+    "name": "Sima Yi",
+    "range": "melee",
+    "roles": [
+      "Jungle",
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Quiet Whispers (passive)",
+        "effect": "empowers his shadow magic after casting abilities."
+      },
+      {
+        "name": "Shadow Stings",
+        "effect": "shadow strike that silences and damages."
+      },
+      {
+        "name": "Barren Lands",
+        "effect": "creates a shadow zone for mobility."
+      },
+      {
+        "name": "Death Descends (ultimate)",
+        "effect": "descends from afar to engage, bursting and silencing targets."
+      }
+    ],
+    "traits": [
+      "burst",
+      "silence",
+      "long-range engage"
+    ]
+  },
+  {
+    "class": [
+      "Support",
+      "Mage"
+    ],
+    "counters": [
+      "Cai Yan",
+      "Da Qiao",
+      "Dolia"
+    ],
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "sun-bin",
+    "name": "Sun Bin",
+    "range": "ranged",
+    "roles": [
+      "Roaming"
+    ],
+    "skills": [
+      {
+        "name": "Hourglass of Time (passive)",
+        "effect": "provides speed utility and delayed recovery for allies."
+      },
+      {
+        "name": "Time Bomb",
+        "effect": "plants a delayed bomb that explodes for damage."
+      },
+      {
+        "name": "Time Flux",
+        "effect": "speeds and re-heals allies after a delay."
+      },
+      {
+        "name": "Time Lapse (ultimate)",
+        "effect": "field that slows and silences enemies."
+      }
+    ],
+    "traits": [
+      "speed utility",
+      "delayed recovery",
+      "slow/silence"
+    ]
+  },
+  {
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "counters": [
+      "Dian Wei",
+      "Lian Po",
+      "Dun"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "sun-ce",
+    "name": "Sun Ce",
+    "range": "melee",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Raging Tide (passive)",
+        "effect": "periodically empowers his basic attacks with tidal damage."
+      },
+      {
+        "name": "Wave Render",
+        "effect": "dashes forward, slashing enemies."
+      },
+      {
+        "name": "Typhoon",
+        "effect": "knocks up and damages nearby enemies."
+      },
+      {
+        "name": "Set Sail! (ultimate)",
+        "effect": "launches his ship for a global sailing engage, knocking up enemies in his path."
+      }
+    ],
+    "traits": [
+      "global engage",
+      "sustain",
+      "crowd control"
+    ]
+  },
+  {
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "counters": [
+      "Wukong",
+      "Musashi",
+      "Zilong",
+      "Jing"
+    ],
+    "damageType": "physical",
+    "difficulty": 7,
+    "id": "ukyo-tachibana",
+    "name": "Ukyo Tachibana",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Ghostly Dashing Slice (passive)",
+        "effect": "enhanced sword strikes after ability casts."
+      },
+      {
+        "name": "Concealed Sabre – Swallow Swipe",
+        "effect": "lunging slash poke."
+      },
+      {
+        "name": "Heavenly Hack",
+        "effect": "upward strike with crowd control."
+      },
+      {
+        "name": "Concealed Sabre – Snowfall Slash (ultimate)",
+        "effect": "flurry of slashes with healing sustain."
+      }
+    ],
+    "traits": [
+      "poke",
+      "burst",
+      "sustain"
+    ]
+  },
+  {
+    "class": [
+      "Fighter"
+    ],
+    "counters": [
+      "Arke",
+      "Sun Ce"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "umbrosa",
+    "name": "Umbrosa",
+    "range": "melee",
+    "roles": [
+      "Clash Lane",
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Passive",
+        "effect": "his attacks leave marks on enemies; his damage scales with attack speed and he is strongest in melee range."
+      },
+      {
+        "name": "Frenzied Dance and Featherstorm",
+        "effect": "his blade skills, core of his Skill 1 + basic attack + Skill 2 combo."
+      },
+      {
+        "name": "Last Dance (ultimate)",
+        "effect": "survives a killing blow when killed."
+      }
+    ],
+    "traits": [
+      "marks",
+      "melee",
+      "post-lethal survival"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": null,
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "wang-wei",
+    "name": "Wang Wei",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": null,
+    "traits": [
+      "area control",
+      "mobility"
+    ]
+  },
+  {
+    "class": [
+      "Assassin",
+      "Fighter"
+    ],
+    "counters": [
+      "Liu Bei",
+      "Athena",
+      "Dian Wei"
+    ],
+    "damageType": "physical",
+    "difficulty": 5,
+    "id": "wukong",
+    "name": "Wukong",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "The Great Sage (passive)",
+        "effect": "critical-focused basic attacks."
+      },
+      {
+        "name": "Protective Shroud",
+        "effect": "gains a shield that blocks an enemy skill."
+      },
+      {
+        "name": "Furious Advance",
+        "effect": "dash mobility."
+      },
+      {
+        "name": "Golden Cudgel (ultimate)",
+        "effect": "sweeping AoE strike with knock-up."
+      }
+    ],
+    "traits": [
+      "critical burst",
+      "mobility",
+      "skill-blocking defence"
+    ]
+  },
+  {
+    "class": [
+      "Fighter",
+      "Tank"
+    ],
+    "counters": [
+      "Lu Bu",
+      "Biron",
+      "Lian Po"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "wuyan",
+    "name": "Wuyan",
+    "range": "melee",
+    "roles": [
+      "Clash Lane"
+    ],
+    "skills": [
+      {
+        "name": "Petrifying Strike (passive)",
+        "effect": "skills and basic attacks have a chance to petrify enemy heroes."
+      },
+      {
+        "name": "Storm and Stress",
+        "effect": "dashes to the target location and enhances the next basic attack for extra damage and slow."
+      },
+      {
+        "name": "Shock and Awe",
+        "effect": "damages enemies in a specified area."
+      },
+      {
+        "name": "Hurricane Hammer (ultimate)",
+        "effect": "swings the hammer continuously, damaging nearby enemies; gains movement speed and a shield; passive periodically grants a shield."
+      }
+    ],
+    "traits": [
+      "petrification",
+      "crowd control",
+      "shields"
+    ]
+  },
+  {
+    "class": [
+      "Tank",
+      "Fighter"
+    ],
+    "counters": [
+      "Charlotte",
+      "Liang"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "xiang-yu",
+    "name": "Xiang Yu",
+    "range": "melee",
+    "roles": [
+      "Clash Lane"
+    ],
+    "skills": [
+      {
+        "name": "Resolute Will (passive)",
+        "effect": "durability that improves at low health."
+      },
+      {
+        "name": "Fearless Charge",
+        "effect": "charging displacement that pushes enemies."
+      },
+      {
+        "name": "No Retreat",
+        "effect": "AoE crowd control around him."
+      },
+      {
+        "name": "Hegemon's Slash (ultimate)",
+        "effect": "massive AoE damage; he is immune to death during it."
+      }
+    ],
+    "traits": [
+      "durability",
+      "displacement",
+      "death immunity (ultimate)"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": [
+      "Shangguan",
+      "Diaochan",
+      "Gan & Mo"
+    ],
+    "damageType": "magical",
+    "difficulty": 3,
+    "id": "xiao-qiao",
+    "name": "Xiao Qiao",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Encouraging Thoughts (passive)",
+        "effect": "gains movement speed."
+      },
+      {
+        "name": "Blossoming Fan",
+        "effect": "throws a fan that damages enemies on the way out and back."
+      },
+      {
+        "name": "Honeysweet Breeze",
+        "effect": "sweet breeze that speeds allies and knocks back enemies."
+      },
+      {
+        "name": "Meteor Storm (ultimate)",
+        "effect": "meteor barrage over an area."
+      }
+    ],
+    "traits": [
+      "artillery",
+      "burst",
+      "movement speed"
+    ]
+  },
+  {
+    "class": [
+      "Assassin"
+    ],
+    "counters": null,
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "xuance",
+    "name": "Xuance",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Frenzy Prologue (passive)",
+        "effect": "chain attacks splash; extended range gains bonus damage, slows enemies and speeds Xuance."
+      },
+      {
+        "name": "Magic Sickle",
+        "effect": "directional dash and empowered attack; drags a hooked target toward him."
+      },
+      {
+        "name": "Nightmare Hook",
+        "effect": "charged ranged hook, mark, damage amplification and recast throw."
+      },
+      {
+        "name": "Quick Scythe Flash (ultimate)",
+        "effect": "up to three dashes around the hooked target with damage reduction and kill/assist buffs."
+      }
+    ],
+    "traits": [
+      "hook",
+      "isolation",
+      "high mobility"
+    ]
+  },
+  {
+    "class": [
+      "Fighter"
+    ],
+    "counters": [
+      "Dun",
+      "Menki",
+      "Lian Po",
+      "Xiang Yu"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "yang-jian",
+    "name": "Yang Jian",
+    "range": "melee",
+    "roles": [
+      "Clash Lane"
+    ],
+    "skills": [
+      {
+        "name": "Mind Games (passive)",
+        "effect": "resistance increases per nearby enemy hero."
+      },
+      {
+        "name": "Unleash the Hound",
+        "effect": "marks the first target; recast dashes to the marked enemy."
+      },
+      {
+        "name": "Vain Disillusionment",
+        "effect": "frontal damage with slow/stun and enhanced basics."
+      },
+      {
+        "name": "Sight of Origin (ultimate)",
+        "effect": "beam damage that restores his health."
+      }
+    ],
+    "traits": [
+      "resistance",
+      "mark-and-dash",
+      "sustain"
+    ]
+  },
+  {
+    "class": [
+      "Fighter"
+    ],
+    "counters": [
+      "Wukong",
+      "Athena",
+      "Agudo"
+    ],
+    "damageType": "mixed",
+    "difficulty": null,
+    "id": "yao",
+    "name": "Yao",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Gift of the Stars (passive)",
+        "effect": "skill hits heal and build Star Power; full charge enables an enhanced skill and a dashing basic attack."
+      },
+      {
+        "name": "Shattered Illusions Slice",
+        "effect": "nearby physical spin damage."
+      },
+      {
+        "name": "Starburn",
+        "effect": "curving dash with damage and slow; the enhanced version changes direction."
+      },
+      {
+        "name": "Return to Dust (ultimate)",
+        "effect": "returns to the position from two seconds earlier, clears delayed damage and deals magical damage."
+      }
+    ],
+    "traits": [
+      "mobility",
+      "sustain",
+      "empowered skill chains"
+    ]
+  },
+  {
+    "class": [
+      "Support"
+    ],
+    "counters": [
+      "Cai Yan",
+      "Ming"
+    ],
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "yaria",
+    "name": "Yaria",
+    "range": "ranged",
+    "roles": [
+      "Roaming"
+    ],
+    "skills": [
+      {
+        "name": "Deer Spirit (passive)",
+        "effect": "spirit-of-the-deer healing and support effects."
+      },
+      {
+        "name": "Wandering Beam",
+        "effect": "beam damage."
+      },
+      {
+        "name": "Accelerating Blitz",
+        "effect": "automatically strikes up to three nearby enemies for five seconds; attached form increases range; cannot basic attack during it."
+      },
+      {
+        "name": "Verdant Protector (ultimate)",
+        "effect": "attaches to an ally, grants a true-damage shield, enhances skills and reduces cooldowns; manual detach refunds cooldown."
+      }
+    ],
+    "traits": [
+      "shielding",
+      "attachment",
+      "crowd-control immunity"
+    ]
+  },
+  {
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "counters": [
+      "Kaizer",
+      "Nakoruru",
+      "Athena"
+    ],
+    "damageType": "physical",
+    "difficulty": 8,
+    "id": "ying",
+    "name": "Ying",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Sweeping Fire (passive)",
+        "effect": "skills build Gun Intent; basics consume stacks for one of three enhanced attacks and reduce basic-skill cooldowns."
+      },
+      {
+        "name": "Moonslash",
+        "effect": "upward/downward spear slashes with knock-up."
+      },
+      {
+        "name": "Cloudchaser",
+        "effect": "charged movement-speed boost followed by a scaling dash, damage and slow."
+      },
+      {
+        "name": "Starburn / Sun Roar (ultimate)",
+        "effect": "unstoppable forward charge and stabs with damage reduction, then a burning sweep."
+      }
+    ],
+    "traits": [
+      "spear-intent combos",
+      "mobility",
+      "crowd control"
+    ]
+  },
+  {
+    "class": [],
+    "counters": null,
+    "damageType": null,
+    "difficulty": null,
+    "id": "yinxing",
+    "name": "Yinxing",
+    "range": null,
+    "roles": [],
+    "skills": null,
+    "traits": []
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": null,
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "yixing",
+    "name": "Yixing",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Maintaining Initiative (passive)",
+        "effect": "basics deal magical damage; every 4 skill hits on the same enemy generates a Weiqi stone; gains brief damage immunity and movement speed on taking fatal damage."
+      },
+      {
+        "name": "Sliding Stones",
+        "effect": "places a Weiqi stone at the target location for vision and damage; stones are pulled into Skill 2's formation, damaging and slowing enemies in their path."
+      },
+      {
+        "name": "Taking Liberties",
+        "effect": "damages a target area and creates a Weiqi formation that pulls enemies to its center, damaging them."
+      },
+      {
+        "name": "The World Is My Board (ultimate)",
+        "effect": "draws a Weiqi board that launches and marks enemies, exposing their location; enemies inside are bound and cannot leave."
+      }
+    ],
+    "traits": [
+      "formation control",
+      "traps",
+      "battlefield zoning"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": [
+      "Shangguan",
+      "Diaochan",
+      "Gan & Mo"
+    ],
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "yuhuan",
+    "name": "Yuhuan",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Poignant Melodies (passive)",
+        "effect": "switches between damage and ally-healing effects triggered by casting."
+      },
+      {
+        "name": "Tragic Beauty",
+        "effect": "multiple slowing waves and an enhanced next basic attack."
+      },
+      {
+        "name": "Mournful Tempo",
+        "effect": "speed boost followed by outer-ring damage and stun."
+      },
+      {
+        "name": "Unending Sorrow (ultimate)",
+        "effect": "becomes untargetable and cleanses control, then heals allies/self and damages enemies."
+      }
+    ],
+    "traits": [
+      "healing",
+      "poke",
+      "crowd control",
+      "untargetability"
+    ]
+  },
+  {
+    "class": [
+      "Tank",
+      "Support"
+    ],
+    "counters": [
+      "Zhuangzi",
+      "Cai Yan"
+    ],
+    "damageType": "physical",
+    "difficulty": null,
+    "id": "zhang-fei",
+    "name": "Zhang Fei",
+    "range": "melee",
+    "roles": [
+      "Roaming"
+    ],
+    "skills": [
+      {
+        "name": "Dark Potential (passive)",
+        "effect": "builds Fury; transformed skills slow nearby enemies."
+      },
+      {
+        "name": "Forbidden Domain",
+        "effect": "spear sweep and hero knockback."
+      },
+      {
+        "name": "Leaping Savior",
+        "effect": "leaps and shields nearby allies."
+      },
+      {
+        "name": "Unbridled Outburst (ultimate)",
+        "effect": "roar transforms him, granting a huge shield and brief invulnerability, pushing enemies and stunning at the path end."
+      }
+    ],
+    "traits": [
+      "shielding",
+      "transformation",
+      "crowd control"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": [
+      "Shangguan",
+      "Angela",
+      "Gan & Mo"
+    ],
+    "damageType": "magical",
+    "difficulty": 7,
+    "id": "zhou-yu",
+    "name": "Zhou Yu",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Blaze (passive)",
+        "effect": "attacks and skills stack marks; four marks ignite the target and slow."
+      },
+      {
+        "name": "Wildfire",
+        "effect": "wind zone modifies movement, pushes enemies and spreads fire zones."
+      },
+      {
+        "name": "Scorching Bolt",
+        "effect": "creates persistent fire zones and heals Zhou Yu while he stands in them."
+      },
+      {
+        "name": "Flames of War (ultimate)",
+        "effect": "flame wave; fire-zone contact adds damage and stun."
+      }
+    ],
+    "traits": [
+      "fire zones",
+      "sustained aoe",
+      "crowd control"
+    ]
+  },
+  {
+    "class": [
+      "Support",
+      "Tank"
+    ],
+    "counters": [
+      "Cai Yan",
+      "Liang",
+      "Dolia"
+    ],
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "zhuangzi",
+    "name": "Zhuangzi",
+    "range": "melee",
+    "roles": [
+      "Roaming"
+    ],
+    "skills": [
+      {
+        "name": "Nature's Will (passive)",
+        "effect": "periodically cleanses and grants control immunity, damage reduction and movement speed."
+      },
+      {
+        "name": "Air Kaleidoscope",
+        "effect": "butterfly wave damages and slows."
+      },
+      {
+        "name": "Sleep Starts",
+        "effect": "nearby damage and stacking allied movement speed."
+      },
+      {
+        "name": "Butterfly Effect (ultimate)",
+        "effect": "team cleanse, control immunity and shield."
+      }
+    ],
+    "traits": [
+      "cleanse",
+      "control immunity",
+      "shielding"
+    ]
+  },
+  {
+    "class": [
+      "Fighter",
+      "Assassin"
+    ],
+    "counters": [
+      "Butterfly",
+      "Dian Wei",
+      "Luna"
+    ],
+    "damageType": "mixed",
+    "difficulty": 6,
+    "id": "zilong",
+    "name": "Zilong",
+    "range": "melee",
+    "roles": [
+      "Jungle"
+    ],
+    "skills": [
+      {
+        "name": "Dragon's Roar (passive)",
+        "effect": "lower-health tiers increase damage reduction and enhance his skills."
+      },
+      {
+        "name": "Thunderbreaker",
+        "effect": "dash followed by an enhanced slowing basic attack."
+      },
+      {
+        "name": "Stormpiercer",
+        "effect": "repeated spear thrusts that heal and gain extra shock damage at low health."
+      },
+      {
+        "name": "Skysplitter (ultimate)",
+        "effect": "leaping AoE strike with center knock-up."
+      }
+    ],
+    "traits": [
+      "dash",
+      "sustain",
+      "low-health durability"
+    ]
+  },
+  {
+    "class": [
+      "Mage"
+    ],
+    "counters": [
+      "Shangguan",
+      "Mai Shiranui",
+      "Daji"
+    ],
+    "damageType": "magical",
+    "difficulty": null,
+    "id": "ziya",
+    "name": "Ziya",
+    "range": "ranged",
+    "roles": [
+      "Mid Lane"
+    ],
+    "skills": [
+      {
+        "name": "Sanctification (passive)",
+        "effect": "bonus experience orbs; at level 15 can reach level 25 and empower one ally to exceed the cap."
+      },
+      {
+        "name": "Divine Seal",
+        "effect": "repeated area damage with escalating slow and physical/magical defence reduction."
+      },
+      {
+        "name": "Divine Punishment",
+        "effect": "three damage waves followed by a delayed explosion and knock-up."
+      },
+      {
+        "name": "Universe Law (ultimate)",
+        "effect": "charged triple long-range shockwave; the post-level-15 version may permit movement."
+      }
+    ],
+    "traits": [
+      "level-cap breaking",
+      "defence reduction",
+      "long-range artillery"
+    ]
+  }
+]

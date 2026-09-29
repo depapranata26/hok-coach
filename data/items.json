@@ -1,0 +1,930 @@
+[
+  {
+    "id": "doomsday",
+    "name": "Doomsday",
+    "category": "attack",
+    "stats": "+60 Physical Attack, +30% Attack Speed, +10% Physical Lifesteal",
+    "effect": "Basic attacks deal bonus physical damage equal to 8% of the target's current health (capped at 80 against monsters).",
+    "counters": null
+  },
+  {
+    "id": "blood-weeper",
+    "name": "Blood Weeper",
+    "category": "attack",
+    "stats": "+100 Physical Attack, +25% Physical Lifesteal, +500 Max Health",
+    "effect": "Restores 400-610 health over 5 seconds when dropping below 30% health (20s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "eternity-edge",
+    "name": "Eternity Edge",
+    "category": "attack",
+    "stats": "+110 Physical Attack, +20% Critical Rate",
+    "effect": "Grants 20% critical damage plus 1% more per 2% critical rate, up to 50%.",
+    "counters": null
+  },
+  {
+    "id": "master-sword",
+    "name": "Master Sword",
+    "category": "attack",
+    "stats": "+80 Physical Attack, +20% Critical Rate, +500 Max Mana, +500 Max Health",
+    "effect": "After using a skill, gain 12% movement speed for 2 seconds and the next basic attack deals bonus physical damage equal to 80% of physical attack (3s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "sparkforged-dagger",
+    "name": "Sparkforged Dagger",
+    "category": "attack",
+    "stats": "+35% Attack Speed, +8% Movement Speed",
+    "effect": "Basic attacks deal 40-92 bonus magic damage, and every third basic attack releases chain lightning for 140-320 magic damage.",
+    "counters": null
+  },
+  {
+    "id": "shadow-ripper",
+    "name": "Shadow Ripper",
+    "category": "attack",
+    "stats": "+35% Attack Speed, +25% Critical Rate, +5% Movement Speed",
+    "effect": "After landing a critical hit, basic attacks deal 40 bonus physical damage and grant 20% attack speed and 5% movement speed for 3 seconds.",
+    "counters": null
+  },
+  {
+    "id": "axe-of-torment",
+    "name": "Axe of Torment",
+    "category": "attack",
+    "stats": "+85 Physical Attack, +15% Cooldown Reduction, +500 Max Health",
+    "effect": "Grants 50 (+8 per level) armor penetration; skills slow the first enemy hero hit by 10% for 3 seconds (8s cooldown).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "siege-breaker",
+    "name": "Siege Breaker",
+    "category": "attack",
+    "stats": "+180 Physical Attack",
+    "effect": "Deals 30% bonus damage to enemies below 50% of max health.",
+    "counters": [
+      "execute"
+    ]
+  },
+  {
+    "id": "runic-blade",
+    "name": "Runic Blade",
+    "category": "attack",
+    "stats": "+90 Physical Attack, +100 Magical Defense, +500 Max Health",
+    "effect": "Grants bonus magical defense equal to 60% of physical attack, up to 300.",
+    "counters": [
+      "anti-magic-burst"
+    ]
+  },
+  {
+    "id": "destiny",
+    "name": "Destiny",
+    "category": "attack",
+    "stats": "+60 Physical Attack, +5% Cooldown Reduction",
+    "effect": "Surviving fatal damage grants brief invincibility and 30% movement speed (120s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "deepfrost-siege",
+    "name": "Deepfrost Siege",
+    "category": "attack",
+    "stats": "+30% Attack Speed, +600 Max Health",
+    "effect": "Basic attacks slow by 3% for 2 seconds stacking 5 times, then deal 30% bonus damage for 5 seconds, and always add 60-340 bonus physical damage.",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "star-breaker",
+    "name": "Star Breaker",
+    "category": "attack",
+    "stats": "+80 Physical Attack, +10% Cooldown Reduction",
+    "effect": "Grants 40% armor penetration.",
+    "counters": null
+  },
+  {
+    "id": "mortal-punisher",
+    "name": "Mortal Punisher",
+    "category": "attack",
+    "stats": "+100 Physical Attack, +15% Attack Speed, +15% Physical Lifesteal",
+    "effect": "Damaging enemies cuts their healing and regeneration by 50% for 1.5 seconds (3s if from a basic attack), and restores 400-610 health over 5 seconds when below 30% health (20s cooldown).",
+    "counters": [
+      "anti-heal",
+      "anti-lifesteal"
+    ]
+  },
+  {
+    "id": "daybreaker",
+    "name": "Daybreaker",
+    "category": "attack",
+    "stats": "+50 Physical Attack, +35% Attack Speed, +10% Critical Rate",
+    "effect": "Grants 20% armor penetration and 50 bonus physical damage on basic attacks, both doubled for ranged heroes.",
+    "counters": null
+  },
+  {
+    "id": "windchaser",
+    "name": "Windchaser",
+    "category": "attack",
+    "stats": "+100 Physical Attack, +15% Critical Rate, +5% Cooldown Reduction",
+    "effect": "After using a skill, the next 3 basic attacks gain 50% attack speed (3s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "voidbreaker",
+    "name": "Voidbreaker",
+    "category": "attack",
+    "stats": "+100 Physical Attack, +10% Critical Rate, +500 Max Health",
+    "effect": "Basic attacks reduce the target's armor by 10% for 2 seconds; the active strengthens the next basic attack to knock the target back for bonus physical damage (30s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "sunchaser",
+    "name": "Sunchaser",
+    "category": "attack",
+    "stats": "+25% Attack Speed, +10% Critical Rate, +5% Movement Speed",
+    "effect": "Basic attacks deal 40 bonus physical damage (doubled for ranged); the active extends basic attack range by 150 for ranged heroes and grants 20% movement speed for 5 seconds (60s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "pure-sky",
+    "name": "Pure Sky",
+    "category": "attack",
+    "stats": "+110 Physical Attack, +10% Cooldown Reduction, +500 Max Health",
+    "effect": "Skills slow the first enemy hero hit by 30% and cut their damage dealt by 20% for 3 seconds (8s cooldown); the active grants 35% damage reduction for 3 seconds and can be used while controlled (90s cooldown).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "sunpool",
+    "name": "Sunpool",
+    "category": "attack",
+    "stats": "+25% Attack Speed, +10% Critical Rate, +5% Movement Speed",
+    "effect": "Basic attacks deal 40 bonus physical damage (doubled for ranged); the active extends range by 150 for ranged heroes, grants 40% movement speed and 30% bonus damage to nearby targets for 5 seconds (60s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "sky-dome",
+    "name": "Sky Dome",
+    "category": "attack",
+    "stats": "+100 Physical Attack, +10% Cooldown Reduction, +500 Max Health",
+    "effect": "Skills slow the first enemy hero hit by 30% and cut their damage by 20% for 3 seconds (8s cooldown); the active grants 40% damage reduction, 30% movement speed and terrain immunity for 3 seconds, refreshed by kills (90s cooldown).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "storm-sword",
+    "name": "Storm Sword",
+    "category": "attack",
+    "stats": "+80 Physical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "sunglow-striker",
+    "name": "Sunglow Striker",
+    "category": "attack",
+    "stats": "+20 Physical Attack, +15% Cooldown Reduction, +300 Max Health",
+    "effect": "Skills slow the first enemy hero hit by 10% for 3 seconds (8s cooldown).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "twinblade-of-destruction",
+    "name": "Twinblade of Destruction",
+    "category": "attack",
+    "stats": "+15% Attack Speed, +10% Critical Rate, +5% Movement Speed",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "meteor",
+    "name": "Meteor",
+    "category": "attack",
+    "stats": "+45 Physical Attack, +10% Cooldown Reduction",
+    "effect": "Grants 60 armor penetration.",
+    "counters": null
+  },
+  {
+    "id": "swiftstrike-lance",
+    "name": "Swiftstrike Lance",
+    "category": "attack",
+    "stats": "+20% Attack Speed",
+    "effect": "Basic attacks deal 40 bonus physical damage (doubled for ranged heroes).",
+    "counters": null
+  },
+  {
+    "id": "cloud-piercer",
+    "name": "Cloud Piercer",
+    "category": "attack",
+    "stats": "+40 Physical Attack, +10% Attack Speed",
+    "effect": "Grants 10% armor penetration (doubled for ranged heroes).",
+    "counters": null
+  },
+  {
+    "id": "blood-soul",
+    "name": "Blood Soul",
+    "category": "attack",
+    "stats": "+30 Physical Attack, +10% Physical Lifesteal",
+    "effect": "Restores 400-610 health over 5 seconds when dropping below 30% health (20s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "iron-sword",
+    "name": "Iron Sword",
+    "category": "attack",
+    "stats": "+20 Physical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "dagger",
+    "name": "Dagger",
+    "category": "attack",
+    "stats": "+10% Attack Speed",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "pugilists-fist",
+    "name": "Pugilist's Fist",
+    "category": "attack",
+    "stats": "+8% Critical Rate",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "vampiric-scythe",
+    "name": "Vampiric Scythe",
+    "category": "attack",
+    "stats": "+8% Physical Lifesteal",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "thunderclap-brand",
+    "name": "Thunderclap Brand",
+    "category": "attack",
+    "stats": "+40 Physical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "raging-claw",
+    "name": "Raging Claw",
+    "category": "attack",
+    "stats": "+15% Critical Rate",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "agile-lance",
+    "name": "Agile Lance",
+    "category": "attack",
+    "stats": "+10 Physical Attack, +4% Cooldown Reduction",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "holy-grail",
+    "name": "Holy Grail",
+    "category": "magic",
+    "stats": "+180 Magical Attack, +15% Cooldown Reduction, +25 Mana Regen per 5s",
+    "effect": "Regenerates 1% mana per second, or 1% health per second when mana is full.",
+    "counters": null
+  },
+  {
+    "id": "void-staff",
+    "name": "Void Staff",
+    "category": "magic",
+    "stats": "+240 Magical Attack, +500 Max Health",
+    "effect": "Grants 45% magical penetration.",
+    "counters": null
+  },
+  {
+    "id": "savants-wrath",
+    "name": "Savant's Wrath",
+    "category": "magic",
+    "stats": "+240 Magical Attack",
+    "effect": "Increases magical attack by 30%.",
+    "counters": null
+  },
+  {
+    "id": "scepter-of-reverberation",
+    "name": "Scepter of Reverberation",
+    "category": "magic",
+    "stats": "+240 Magical Attack, +7% Movement Speed",
+    "effect": "Skill hits trigger a small explosion for 120 (+40% of magical attack) magic damage (5s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "mask-of-agony",
+    "name": "Mask of Agony",
+    "category": "magic",
+    "stats": "+120 Magical Attack, +5% Cooldown Reduction, +800 Max Health",
+    "effect": "Deals magic damage equal to 3% of the target's current health every 0.75 seconds, up to 4 times (capped at 200 per tick against monsters, 2s cooldown).",
+    "counters": [
+      "burn"
+    ]
+  },
+  {
+    "id": "stave-of-sorcery",
+    "name": "Stave of Sorcery",
+    "category": "magic",
+    "stats": "+180 Magical Attack, +500 Max Health, +500 Max Mana, +8% Movement Speed",
+    "effect": "After using a skill, the next basic attack within 5 seconds deals bonus magic damage equal to 30% of physical attack plus 70% of magical attack (3s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "augurs-word",
+    "name": "Augur's Word",
+    "category": "magic",
+    "stats": "+140 Magical Attack, +500 Max Mana, +1100 Max Health",
+    "effect": "Recovers 20% health and mana over 3 seconds on every hero level-up, and grants bonus armor and magic armor equal to 40% of magical attack (up to 250).",
+    "counters": null
+  },
+  {
+    "id": "tome-of-wisdom",
+    "name": "Tome of Wisdom",
+    "category": "magic",
+    "stats": "+400 Magical Attack, +10% Cooldown Reduction",
+    "effect": "Grants 0.8% bonus damage per 100 magical attack, up to 12%.",
+    "counters": null
+  },
+  {
+    "id": "insatiable-tome",
+    "name": "Insatiable Tome",
+    "category": "magic",
+    "stats": "+180 Magical Attack, +10% Cooldown Reduction, +1000 Max Health",
+    "effect": "Grants 25% magical lifesteal.",
+    "counters": null
+  },
+  {
+    "id": "frozen-breath",
+    "name": "Frozen Breath",
+    "category": "magic",
+    "stats": "+160 Magical Attack, +5% Cooldown Reduction, +600 Max Health",
+    "effect": "Skills slow targets by 20% for 2 seconds and deal 120-400 bonus magic damage to movement-impaired targets (5s cooldown).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "ardent-dominator",
+    "name": "Ardent Dominator",
+    "category": "magic",
+    "stats": "+200 Magical Attack, +600 Max Mana, +15 Mana Regen per 5s",
+    "effect": "Dropping below 30% health cleanses crowd control and grants a shield absorbing 500 (+150% of magical attack) damage plus 30% movement speed for 4 seconds (90s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "twilight-stream",
+    "name": "Twilight Stream",
+    "category": "magic",
+    "stats": "+140 Magical Attack, +10% Cooldown Reduction, +300 Max Health",
+    "effect": "Damaging enemy heroes grants 14-28 magical penetration for 4 seconds, stacking up to 10 times.",
+    "counters": null
+  },
+  {
+    "id": "golden-blade",
+    "name": "Golden Blade",
+    "category": "magic",
+    "stats": "+160 Magical Attack, +20% Attack Speed, +5% Movement Speed",
+    "effect": "Basic attack hits grant 10% attack speed for 5 seconds stacking twice, then deal bonus magic damage equal to 30% of magical attack; basic attacks also deal 60 bonus physical damage (doubled for ranged).",
+    "counters": null
+  },
+  {
+    "id": "venomous-staff",
+    "name": "Venomous Staff",
+    "category": "magic",
+    "stats": "+240 Magical Attack, +5% Movement Speed, +5% Cooldown Reduction",
+    "effect": "Damaging enemies cuts their healing and regeneration by 50% for 1.5 seconds (3s if from a basic attack).",
+    "counters": [
+      "anti-heal",
+      "anti-lifesteal"
+    ]
+  },
+  {
+    "id": "breakthrough-robe",
+    "name": "Breakthrough Robe",
+    "category": "magic",
+    "stats": "+160 Magical Attack, +1000 Max Health",
+    "effect": "Grants 0-5% damage reduction against nearby targets (scaling with range), plus 1.5% per 100 magical attack up to 20%.",
+    "counters": null
+  },
+  {
+    "id": "splendor",
+    "name": "Splendor",
+    "category": "magic",
+    "stats": "+160 Magical Attack, +10% Cooldown Reduction",
+    "effect": "The active grants immunity to all damage and effects for 1.5 seconds, but the hero is frozen and cannot act (90s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "moon-spirit",
+    "name": "Moon Spirit",
+    "category": "magic",
+    "stats": "+160 Magical Attack, +10% Cooldown Reduction",
+    "effect": "The active grants immunity to all damage and effects for 1.5 seconds while frozen, then restores 1000 (+100% of magical attack) health and grants 60% decaying movement speed (90s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "grand-staff",
+    "name": "Grand Staff",
+    "category": "magic",
+    "stats": "+120 Magical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "blood-clans-grimoire",
+    "name": "Blood Clan's Grimoire",
+    "category": "magic",
+    "stats": "+75 Magical Attack, +10% Cooldown Reduction",
+    "effect": "Grants 20% magical lifesteal.",
+    "counters": null
+  },
+  {
+    "id": "sword-of-glory",
+    "name": "Sword of Glory",
+    "category": "magic",
+    "stats": "+400 Max Health, +400 Max Mana",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "demonic-spirit-stone",
+    "name": "Demonic Spirit Stone",
+    "category": "magic",
+    "stats": "+90 Magical Attack",
+    "effect": "After a skill hits a target, deals 200 bonus magic damage (5s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "evolution-crystal",
+    "name": "Evolution Crystal",
+    "category": "magic",
+    "stats": "+400 Max Health, +400 Max Mana",
+    "effect": "Recovers 20% health and mana over 3 seconds on every hero level-up.",
+    "counters": null
+  },
+  {
+    "id": "shattered-grail",
+    "name": "Shattered Grail",
+    "category": "magic",
+    "stats": "+60 Magical Attack, +8% Cooldown Reduction, +20 Mana Regen per 5s",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "nebulon-wood",
+    "name": "Nebulon Wood",
+    "category": "magic",
+    "stats": "+70 Magical Attack, +300 Max Health",
+    "effect": "Grants 60 magical penetration.",
+    "counters": null
+  },
+  {
+    "id": "spell-tome",
+    "name": "Spell Tome",
+    "category": "magic",
+    "stats": "+40 Magical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "sparkling-sapphire",
+    "name": "Sparkling Sapphire",
+    "category": "magic",
+    "stats": "+300 Max Mana",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "alchemists-amulet",
+    "name": "Alchemist's Amulet",
+    "category": "magic",
+    "stats": "+10 Mana Regen per 5s",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "sages-codex",
+    "name": "Sage's Codex",
+    "category": "magic",
+    "stats": "+40 Magical Attack, +4% Cooldown Reduction",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "primal-scepter",
+    "name": "Primal Scepter",
+    "category": "magic",
+    "stats": "+80 Magical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "red-lotus-cape",
+    "name": "Red Lotus Cape",
+    "category": "defense",
+    "stats": "+240 Physical Defense, +1000 Max Health",
+    "effect": "Deals magic damage equal to 2% of max health per second to nearby enemies within 300 units.",
+    "counters": [
+      "burn"
+    ]
+  },
+  {
+    "id": "overlords-platemail",
+    "name": "Overlord's Platemail",
+    "category": "defense",
+    "stats": "+2000 Max Health, +100 HP Regen per 5s",
+    "effect": "Recovers 1% of lost health every 2 seconds, or 3% of max health per second plus 30 movement speed when out of combat.",
+    "counters": null
+  },
+  {
+    "id": "ominous-premonition",
+    "name": "Ominous Premonition",
+    "category": "defense",
+    "stats": "+270 Physical Defense, +1200 Max Health",
+    "effect": "When attacked, reduces the attacker's attack speed by 50% and movement speed by 10% for 3 seconds.",
+    "counters": [
+      "anti-attack-speed",
+      "slow"
+    ]
+  },
+  {
+    "id": "eye-of-phoenix",
+    "name": "Eye of Phoenix",
+    "category": "defense",
+    "stats": "+240 Physical Defense, +1200 Max Health, +100 HP Regen per 5s",
+    "effect": "Increases regeneration effects by 6% for every 10% of max health lost.",
+    "counters": null
+  },
+  {
+    "id": "succubus-cloak",
+    "name": "Succubus Cloak",
+    "category": "defense",
+    "stats": "+240 Magical Defense, +1000 Max Health, +100 HP Regen per 5s",
+    "effect": "Leaving combat grants a shield absorbing 100 (+100 per level) magic damage, and bonus magical defense equal to 8 per level.",
+    "counters": [
+      "anti-magic-burst"
+    ]
+  },
+  {
+    "id": "glacial-buckler",
+    "name": "Glacial Buckler",
+    "category": "defense",
+    "stats": "+360 Magical Defense, +20% Cooldown Reduction, +500 Max Mana",
+    "effect": "Taking a single hit above 10% of current health triggers an ice blast dealing 50 (+10 per level) magic damage and cutting nearby enemies' attack and movement speed by 30% for 2 seconds (2s cooldown).",
+    "counters": [
+      "anti-attack-speed",
+      "anti-magic-burst",
+      "slow"
+    ]
+  },
+  {
+    "id": "sages-sanctuary",
+    "name": "Sage's Sanctuary",
+    "category": "defense",
+    "stats": "+140 Physical Defense, +140 Magical Defense",
+    "effect": "Respawns on the spot 2 seconds after death with 2000 (+100 per level) health; triggers at most twice per game, then becomes the Primordial Bead (150s cooldown).",
+    "counters": [
+      "cc-immunity"
+    ]
+  },
+  {
+    "id": "cuirass-of-savagery",
+    "name": "Cuirass of Savagery",
+    "category": "defense",
+    "stats": "+30 Physical Attack, +220 Physical Defense, +900 Max Health, +5% Movement Speed",
+    "effect": "Taking damage grants a stack for 3 seconds (up to 5), each giving 2% bonus damage and 2% movement speed.",
+    "counters": null
+  },
+  {
+    "id": "darknight-guardian",
+    "name": "Darknight Guardian",
+    "category": "defense",
+    "stats": "+360 Magical Defense, +1000 Max Health",
+    "effect": "Taking more than 30% of max health as damage within 3 seconds restores 320 (+8% of max health) health over 3 seconds (7s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "frostscars-embrace",
+    "name": "Frostscar's Embrace",
+    "category": "defense",
+    "stats": "+240 Physical Defense, +500 Max Health, +500 Max Mana, +10% Cooldown Reduction, +40 Physical Attack",
+    "effect": "After using a skill, the next basic attack within 5 seconds slows by 30% (10% for ranged) and deals 140 (+20 per level) bonus physical damage (1.2s cooldown).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "spikemail",
+    "name": "Spikemail",
+    "category": "defense",
+    "stats": "+360 Physical Defense, +30 Physical Attack",
+    "effect": "Reflects 25% of physical damage taken as magic damage (scaling with armor up to 100%, reduced by range); taking over 2000 physical damage within 2 seconds deals 8% of max health as magic damage to nearby enemies (3s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "pearl-of-origin",
+    "name": "Pearl of Origin",
+    "category": "defense",
+    "stats": "+140 Physical Defense, +140 Magical Defense",
+    "effect": "Path item for tier-4 equipment (purchasable after 20 minutes); automatically becomes the Primordial Bead once Sage's Sanctuary has triggered twice.",
+    "counters": null
+  },
+  {
+    "id": "blood-rage",
+    "name": "Blood Rage",
+    "category": "defense",
+    "stats": "+40 Physical Attack, +1000 Max Health",
+    "effect": "Basic attacks deal bonus physical damage equal to 4% of bonus health, doubled below 50% health; the active sacrifices 30% of current health for a shield equal to 40% of max health and 80 attack for 4 seconds.",
+    "counters": null
+  },
+  {
+    "id": "frigid-charge",
+    "name": "Frigid Charge",
+    "category": "defense",
+    "stats": "+240 Physical Defense, +1000 Max Health",
+    "effect": "Suffering hard crowd control (except suppression) grants a shield equal to 12% of max health for 5 seconds (15s cooldown); the active stuns and deals 60-200 magic damage within 500 units, then slows by 50% for 1 second (longer if already impaired).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "phantom",
+    "name": "Phantom",
+    "category": "defense",
+    "stats": "+40 Physical Attack, +1000 Max Health",
+    "effect": "Basic attacks deal bonus physical damage equal to 4% of bonus health, doubled below 50% health; the active sacrifices 30% of current health for a shield equal to 50% of max health and 80 attack for 4 seconds, burning nearby enemies for 8% of bonus health as magic damage per second.",
+    "counters": [
+      "burn"
+    ]
+  },
+  {
+    "id": "winter",
+    "name": "Winter",
+    "category": "defense",
+    "stats": "+240 Physical Defense, +1000 Max Health",
+    "effect": "Suffering hard crowd control (except suppression) grants a shield equal to 12% of max health for 5 seconds (15s cooldown); the active stuns and deals 60-200 magic damage within 600 units, then slows by 90% for 1 second (longer if already impaired).",
+    "counters": [
+      "slow"
+    ]
+  },
+  {
+    "id": "belt-of-might",
+    "name": "Belt of Might",
+    "category": "defense",
+    "stats": "+1000 Max Health",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "energy-core",
+    "name": "Energy Core",
+    "category": "defense",
+    "stats": "+700 Max Health",
+    "effect": "Deals magic damage equal to 1% of max health per second to nearby enemies, creeps and monsters within 300 units.",
+    "counters": [
+      "burn"
+    ]
+  },
+  {
+    "id": "clandestine-cape",
+    "name": "Clandestine Cape",
+    "category": "defense",
+    "stats": "+120 Magical Defense, +700 Max Health, +59 HP Regen per 5s",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "frosthold-targe",
+    "name": "Frosthold Targe",
+    "category": "defense",
+    "stats": "+110 Physical Defense, +10% Cooldown Reduction, +400 Max Mana",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "protectors-cuirass",
+    "name": "Protector's Cuirass",
+    "category": "defense",
+    "stats": "+210 Physical Defense",
+    "effect": "When attacked, reduces the attacker's attack speed by 15% for 3 seconds.",
+    "counters": [
+      "anti-attack-speed"
+    ]
+  },
+  {
+    "id": "nettle-gauntlet",
+    "name": "Nettle Gauntlet",
+    "category": "defense",
+    "stats": "+160 Physical Defense, +30 Physical Attack",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "darknight-breastplate",
+    "name": "Darknight Breastplate",
+    "category": "defense",
+    "stats": "+180 Magical Defense",
+    "effect": "Taking more than 40% of max health as damage within 3 seconds restores 60 (+6% of max health) health over 3 seconds (7s cooldown).",
+    "counters": null
+  },
+  {
+    "id": "resilient-agate",
+    "name": "Resilient Agate",
+    "category": "defense",
+    "stats": "+300 Max Health",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "cloth-jerkin",
+    "name": "Cloth Jerkin",
+    "category": "defense",
+    "stats": "+90 Physical Defense",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "anti-magic-cloak",
+    "name": "Anti-Magic Cloak",
+    "category": "defense",
+    "stats": "+90 Magical Defense",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "revitalizing-crystal",
+    "name": "Revitalizing Crystal",
+    "category": "defense",
+    "stats": "+30 HP Regen per 5s",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "cape-of-radiance",
+    "name": "Cape of Radiance",
+    "category": "defense",
+    "stats": "+5% Cooldown Reduction, +90 Physical Defense, +60 HP Regen per 5s",
+    "effect": "Basic component item with no passive effect.",
+    "counters": null
+  },
+  {
+    "id": "lightfoot-shoes",
+    "name": "Lightfoot Shoes",
+    "category": "movement",
+    "stats": "+30 Movement Speed",
+    "effect": "Basic boots component; its movement speed does not stack with other boots.",
+    "counters": null
+  },
+  {
+    "id": "boots-of-fortitude",
+    "name": "Boots of Fortitude",
+    "category": "movement",
+    "stats": "+120 Physical Defense, +60 Movement Speed",
+    "effect": "Reduces physical damage taken by 10%.",
+    "counters": [
+      "anti-physical-burst"
+    ]
+  },
+  {
+    "id": "boots-of-resistance",
+    "name": "Boots of Resistance",
+    "category": "movement",
+    "stats": "+120 Magical Defense, +60 Movement Speed",
+    "effect": "Grants 30% resistance, shortening crowd control durations.",
+    "counters": null
+  },
+  {
+    "id": "boots-of-tranquility",
+    "name": "Boots of Tranquility",
+    "category": "movement",
+    "stats": "+15% Cooldown Reduction, +60 Movement Speed",
+    "effect": "Further increases cooldown reduction on common skills with cooldowns over 5 seconds.",
+    "counters": null
+  },
+  {
+    "id": "boots-of-the-arcane",
+    "name": "Boots of the Arcane",
+    "category": "movement",
+    "stats": "+25 Mana Regen per 5s, +60 Movement Speed",
+    "effect": "Grants magical penetration that grows with hero level (up to 100).",
+    "counters": null
+  },
+  {
+    "id": "boots-of-dexterity",
+    "name": "Boots of Dexterity",
+    "category": "movement",
+    "stats": "+20% Attack Speed, +60 Movement Speed",
+    "effect": "The first target hit by each basic attack restores health (halved against non-hero units).",
+    "counters": null
+  },
+  {
+    "id": "boots-of-deftness",
+    "name": "Boots of Deftness",
+    "category": "movement",
+    "stats": "+300 Max Health, +70 Movement Speed",
+    "effect": "Grants 50 bonus movement speed when out of combat.",
+    "counters": null
+  },
+  {
+    "id": "hunting-knife",
+    "name": "Hunting Knife",
+    "category": "jungle",
+    "stats": null,
+    "effect": "Reduces damage taken from monsters by 25% and grants 20% more monster experience; basic attacks and skills burn monsters for 70-140 magic damage every 0.5 seconds for 2 seconds.",
+    "counters": [
+      "burn"
+    ]
+  },
+  {
+    "id": "relentless-blade",
+    "name": "Relentless Blade",
+    "category": "jungle",
+    "stats": null,
+    "effect": "Monster kills grant 3 physical attack per stack (up to 15); basic attacks and skills deal 70 plus 40% bonus physical damage to monsters every 0.5 seconds for 2 seconds (melee heroes only).",
+    "counters": null
+  },
+  {
+    "id": "patrol-axe",
+    "name": "Patrol Axe",
+    "category": "jungle",
+    "stats": null,
+    "effect": "Monster kills grant 30 max health per stack (up to 15); basic attacks and skills deal 60 plus 4% bonus true damage to monsters every 0.5 seconds for 2 seconds.",
+    "counters": null
+  },
+  {
+    "id": "guerrilla-machete",
+    "name": "Guerrilla Machete",
+    "category": "jungle",
+    "stats": null,
+    "effect": "Monster kills grant 6 magical attack per stack (up to 15); basic attacks and skills deal 70 plus 25% bonus magic damage to monsters every 0.5 seconds for 2 seconds.",
+    "counters": null
+  },
+  {
+    "id": "giants-grip",
+    "name": "Giant's Grip",
+    "category": "jungle",
+    "stats": "+5% Cooldown Reduction, +1200 Max Health, +6% Movement Speed",
+    "effect": "Monster kills grant stacking max health and cooldown reduction; damaging enemy heroes burns them and slows their movement speed.",
+    "counters": [
+      "burn",
+      "slow"
+    ]
+  },
+  {
+    "id": "rapacious-bite",
+    "name": "Rapacious Bite",
+    "category": "jungle",
+    "stats": "+90 Physical Attack, +5% Cooldown Reduction, +8% Movement Speed",
+    "effect": "Monster kills grant stacking physical attack, cooldown reduction and armor penetration.",
+    "counters": null
+  },
+  {
+    "id": "runeblade",
+    "name": "Runeblade",
+    "category": "jungle",
+    "stats": "+150 Magical Attack, +5% Cooldown Reduction, +7% Movement Speed",
+    "effect": "Monster kills grant stacking magical attack; skills trigger a delayed magic explosion and basic attacks are empowered after casting.",
+    "counters": null
+  },
+  {
+    "id": "knowledge-gem",
+    "name": "Knowledge Gem",
+    "category": "roaming",
+    "stats": "+5% Movement Speed",
+    "effect": "Grants 5 gold and experience every 3 seconds; instead of sharing minion and monster kill earnings, the holder gains a separate 25-50% gold and experience cut (maxing at 20:00).",
+    "counters": null
+  },
+  {
+    "id": "guardian",
+    "name": "Guardian",
+    "category": "roaming",
+    "stats": "+500 Max Health, +6% Movement Speed",
+    "effect": "Nearby teammates within 800 units gain 32-60 physical and magical defense; monster and minion kills grant stacking max health and main attack stat, plus a gold and experience trickle.",
+    "counters": null
+  },
+  {
+    "id": "crimson-shadow",
+    "name": "Crimson Shadow",
+    "category": "roaming",
+    "stats": "+500 Max Health, +6% Movement Speed",
+    "effect": "Nearby allies gain 8% attack speed, 8% cooldown reduction and 10 mana regen per 5 seconds, plus a gold and experience trickle instead of shared lane earnings.",
+    "counters": null
+  },
+  {
+    "id": "stormchaser",
+    "name": "Stormchaser",
+    "category": "roaming",
+    "stats": "+500 Max Health, +6% Movement Speed",
+    "effect": "Allies within 800 units gain 3% movement speed and 20 main attack stat; monster and minion kills grant stacking max health and main attack stat, plus a gold and experience trickle.",
+    "counters": null
+  }
+]

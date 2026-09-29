@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>HoK Coach — Honor of Kings Global</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1526">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:#0d1526;color:#e8edf5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;padding-bottom:76px;min-height:100vh;min-height:100svh}
+header{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,#16233f,#0d1526);padding:12px 14px;border-bottom:1px solid #24344f}
+header h1{font-size:18px;color:#f5c451}
+header p{font-size:11px;color:#8fa0bd;margin-top:2px}
+.tab{display:none;padding:12px 12px 20px;max-width:640px;margin:0 auto}
+.tab.active{display:block}
+nav#tabs{position:fixed;bottom:0;left:0;right:0;z-index:30;display:flex;background:#111d33;border-top:1px solid #24344f}
+nav#tabs button{flex:1;background:none;border:none;color:#8fa0bd;font-size:11px;padding:10px 2px 12px;cursor:pointer}
+nav#tabs button .ico{font-size:20px;display:block;margin-bottom:2px}
+nav#tabs button.active{color:#f5c451}
+.card{background:#16233f;border:1px solid #24344f;border-radius:12px;padding:12px;margin-bottom:12px}
+.card h3{font-size:14px;color:#f5c451;margin-bottom:8px}
+.search{width:100%;padding:10px 12px;font-size:16px;border-radius:10px;border:1px solid #24344f;background:#0d1526;color:#e8edf5;margin-bottom:8px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:4px}
+.chip{flex:0 0 auto;padding:7px 12px;border-radius:20px;border:1px solid #24344f;background:#111d33;color:#8fa0bd;font-size:12px;cursor:pointer}
+.chip.active{background:#f5c451;color:#0d1526;border-color:#f5c451;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:8px}
+.hero{background:#111d33;border:2px solid #24344f;border-radius:10px;padding:8px 4px;text-align:center;cursor:pointer;position:relative}
+.hero .face{width:44px;height:44px;border-radius:50%;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#0d1526}
+.hero .nm{font-size:11px;line-height:1.25;min-height:28px}
+.hero.sel{border-color:#f5c451;background:#1d2c4d}
+.hero .x{position:absolute;top:2px;right:4px;color:#ff7b7b;font-size:14px;display:none}
+.hero.sel .x{display:block}
+.hero .lane{font-size:9px;color:#8fa0bd;margin-top:2px}
+.slotbar{display:flex;gap:6px;margin-bottom:10px}
+.slot{flex:1;min-height:52px;border:1px dashed #3a4c6e;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#8fa0bd;text-align:center;padding:4px}
+.slot.fill{border-style:solid;border-color:#f5c451;color:#e8edf5}
+.btn{display:block;width:100%;padding:13px;border:none;border-radius:12px;background:#f5c451;color:#0d1526;font-size:15px;font-weight:800;cursor:pointer;margin:8px 0}
+.btn.ghost{background:#111d33;color:#f5c451;border:1px solid #f5c451}
+.btn.sm{padding:8px;font-size:13px;margin:4px 0}
+.mixbar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:8px 0}
+.mixbar div{height:100%}
+.kv{display:flex;justify-content:space-between;font-size:12px;color:#8fa0bd;margin:3px 0}
+.kv b{color:#e8edf5}
+.teamrow{display:flex;gap:10px;align-items:center;background:#111d33;border:1px solid #24344f;border-radius:10px;padding:10px;margin-bottom:8px;cursor:pointer}
+.teamrow .face{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#0d1526;flex:0 0 auto}
+.teamrow .info{flex:1}
+.teamrow .info .ln{font-size:10px;color:#f5c451;text-transform:uppercase;letter-spacing:.5px}
+.teamrow .info .hn{font-size:14px;font-weight:700}
+.teamrow .info .rs{font-size:11px;color:#8fa0bd;margin-top:2px}
+.teamrow .chev{color:#8fa0bd}
+.build{display:none;padding:10px;background:#0d1526;border-radius:10px;margin:-4px 0 8px;border:1px solid #24344f}
+.build.open{display:block}
+.itline{display:flex;gap:8px;align-items:flex-start;padding:7px 0;border-bottom:1px solid #1c2a45;font-size:12px}
+.itline:last-child{border:none}
+.itline .dot{width:10px;height:10px;border-radius:50%;margin-top:4px;flex:0 0 auto}
+.itline b{color:#f5c451}
+.itline .rsn{color:#8fa0bd;font-size:11px}
+.tip{background:#111d33;border-left:3px solid #f5c451;padding:8px 10px;border-radius:0 8px 8px 0;margin-bottom:8px;font-size:13px}
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:flex-end;justify-content:center;background:rgba(0,0,0,.6)}
+.modal.open{display:flex}
+.sheet{background:#16233f;border-radius:16px 16px 0 0;width:100%;max-width:640px;max-height:88vh;max-height:88svh;overflow-y:auto;padding:16px 14px 30px;position:relative}
+.sheet .close{position:sticky;top:0;float:right;background:#24344f;border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer}
+.skill{margin-bottom:10px;font-size:13px}
+.skill b{color:#f5c451}
+.tag{display:inline-block;background:#24344f;border-radius:12px;padding:3px 10px;font-size:11px;margin:2px 4px 2px 0;color:#c6d2e6}
+.arcrow{display:flex;gap:8px;margin-bottom:8px}
+.arccol{flex:1;text-align:center}
+.arccol .ab{border-radius:10px;padding:10px 6px;font-size:12px;font-weight:700;margin-bottom:4px}
+.arccol small{font-size:10px;color:#8fa0bd;display:block;line-height:1.4}
+.red .ab{background:#5c1f28;color:#ffb3b3}.blue .ab{background:#1f3a5c;color:#b3d4ff}.green .ab{background:#1f5c3a;color:#b3ffcf}
+.empty{text-align:center;color:#8fa0bd;padding:30px 10px;font-size:13px}
+h2.sec{font-size:15px;color:#f5c451;margin:14px 0 8px}
+.note{font-size:11px;color:#8fa0bd;margin-top:6px;line-height:1.5}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚔️ HoK Coach</h1>
+  <p>Honor of Kings Global — analisis musuh, counter pick, build & arcana</p>
+</header>
+
+<!-- TAB: LAWAN -->
+<section class="tab active" id="tabLawan">
+  <div class="card">
+    <h3>🎯 Pilih 5 hero musuh</h3>
+    <div class="slotbar" id="enemySlots"></div>
+    <input class="search" id="qLawan" placeholder="Cari hero musuh..." autocomplete="off">
+    <div class="chips" id="clsLawan"></div>
+    <div class="grid" id="gridLawan"></div>
+  </div>
+  <button class="btn" id="btnAnalisis">📊 Analisis & Minta Rekomendasi</button>
+  <button class="btn ghost" id="btnResetLawan">Reset pilihan</button>
+  <p class="note">Logika counter bersifat rule-based dari data komunitas (bukan win-rate resmi). Patch data: Sept 2026.</p>
+</section>
+
+<!-- TAB: ANALISIS -->
+<section class="tab" id="tabAnalisis">
+  <div id="anaWrap"><div class="empty">Pilih dulu 5 hero musuh di tab ⚔️ Lawan.<br><br><button class="btn sm" onclick="go('tabLawan')">Ke tab Lawan</button></div></div>
+</section>
+
+<!-- TAB: RACIK -->
+<section class="tab" id="tabRacik">
+  <div class="card">
+    <h3>🎴 Racik build 1 hero</h3>
+    <input class="search" id="qRacik" placeholder="Cari hero..." autocomplete="off">
+    <div class="chips" id="clsRacik"></div>
+    <div class="grid" id="gridRacik"></div>
+  </div>
+  <div id="racikWrap"></div>
+</section>
+
+<!-- TAB: DATA -->
+<section class="tab" id="tabData">
+  <div class="card">
+    <h3>📚 Database</h3>
+    <div class="chips" id="dataTabs">
+      <button class="chip active" data-dt="heroes">Hero (111)</button>
+      <button class="chip" data-dt="items">Item (109)</button>
+      <button class="chip" data-dt="arcana">Arcana (30)</button>
+    </div>
+    <input class="search" id="qData" placeholder="Cari..." autocomplete="off">
+    <div id="dataWrap"></div>
+  </div>
+</section>
+
+<nav id="tabs">
+  <button data-t="tabLawan" class="active"><span class="ico">⚔️</span>Lawan</button>
+  <button data-t="tabAnalisis"><span class="ico">📊</span>Analisis</button>
+  <button data-t="tabRacik"><span class="ico">🎴</span>Racik</button>
+  <button data-t="tabData"><span class="ico">📚</span>Data</button>
+</nav>
+
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+
+<script src="engine.js"></script>
+<script>
+const E = window.HokEngine;
+let HEROES=[], ITEMS=[], ARCANAS=null;
+const state = { enemies:[], fLawan:'all', qLawan:'', fRacik:'all', qRacik:'', dt:'heroes', qData:'', racik:null };
+const CLSCOLOR = {Fighter:'#e8a33d',Mage:'#9d7bff',Assassin:'#ff6b6b',Marksman:'#4dd0a6',Tank:'#7ba7ff',Support:'#ffd166',Custom:'#aaa'};
+const CATCOLOR = {attack:'#4dd0a6',magic:'#9d7bff',defense:'#7ba7ff',movement:'#e8a33d',jungle:'#ff9f6b',roaming:'#ffd166'};
+
+function go(id){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('nav#tabs button').forEach(b=>b.classList.toggle('active',b.dataset.t===id));
+  window.scrollTo(0,0);
+}
+document.querySelectorAll('nav#tabs button').forEach(b=>b.onclick=()=>go(b.dataset.t));
+
+function face(h, sz){
+  const c = (h.class||[])[0] || 'Custom';
+  const col = CLSCOLOR[c]||'#aaa';
+  const init = h.name.split(/[\s']/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+  return `<div class="face" style="background:${col}">${init}</div>`;
+}
+function heroCard(h, sel){
+  return `<div class="hero${sel?' sel':''}" data-id="${h.id}">${face(h)}<div class="nm">${h.name}</div><div class="lane">${(h.roles||[]).join(' · ')}</div><div class="x">✕</div></div>`;
+}
+function bindGrid(el, fn){
+  el.querySelectorAll('.hero').forEach(c=>c.onclick=()=>fn(c.dataset.id));
+}
+
+async function load(){
+  [HEROES, ITEMS, ARCANAS] = await Promise.all([
+    fetch('data/heroes.json').then(r=>r.json()),
+    fetch('data/items.json').then(r=>r.json()),
+    fetch('data/arcana.json').then(r=>r.json()),
+  ]);
+  buildFilters(); renderLawan(); renderRacikGrid(); renderData();
+}
+
+// ---------- LAWAN ----------
+function buildFilters(){
+  const cls = ['all',...new Set(HEROES.flatMap(h=>h.class||[]))];
+  for (const [el, key] of [['clsLawan','fLawan'],['clsRacik','fRacik']]){
+    document.getElementById(el).innerHTML = cls.map(c=>`<button class="chip${state[key]==='all'&&c==='all'?' active':''}" data-c="${c}" data-k="${key}">${c==='all'?'Semua':c}</button>`).join('');
+  }
+  document.querySelectorAll('#clsLawan .chip, #clsRacik .chip').forEach(ch=>ch.onclick=()=>{
+    state[ch.dataset.k]=ch.dataset.c;
+    ch.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+    ch.classList.add('active');
+    ch.dataset.k==='fLawan'?renderLawan():renderRacikGrid();
+  });
+  document.getElementById('qLawan').oninput=e=>{state.qLawan=e.target.value.toLowerCase();renderLawan();};
+  document.getElementById('qRacik').oninput=e=>{state.qRacik=e.target.value.toLowerCase();renderRacikGrid();};
+}
+function filtHeroes(q,f){
+  return HEROES.filter(h=>
+    (f==='all'||(h.class||[]).includes(f)) &&
+    (!q||h.name.toLowerCase().includes(q)));
+}
+function renderLawan(){
+  const list = filtHeroes(state.qLawan,state.fLawan);
+  const g = document.getElementById('gridLawan');
+  g.innerHTML = list.map(h=>heroCard(h,state.enemies.includes(h.id))).join('');
+  bindGrid(g, id=>{
+    const i = state.enemies.indexOf(id);
+    if(i>=0) state.enemies.splice(i,1);
+    else if(state.enemies.length<5) state.enemies.push(id);
+    renderLawan();
+  });
+  const sl = document.getElementById('enemySlots');
+  sl.innerHTML = Array.from({length:5},(_,i)=>{
+    const id = state.enemies[i];
+    const h = id && HEROES.find(x=>x.id===id);
+    return `<div class="slot${h?' fill':''}">${h?h.name:'Musuh '+(i+1)}</div>`;
+  }).join('');
+}
+document.getElementById('btnResetLawan').onclick=()=>{state.enemies=[];renderLawan();};
+document.getElementById('btnAnalisis').onclick=()=>{
+  if(!state.enemies.length){alert('Pilih minimal 1 hero musuh dulu, Bos.');return;}
+  renderAnalisis(); go('tabAnalisis');
+};
+
+// ---------- ANALISIS ----------
+function renderAnalisis(){
+  const an = E.analyzeEnemy(state.enemies, HEROES);
+  const team = E.recommendTeam(state.enemies, HEROES, an);
+  const tips = E.makeStrategy(an);
+  const tot = Math.max(1, an.phys + an.mag);
+  const w = document.getElementById('anaWrap');
+  w.innerHTML = `
+    <div class="card"><h3>👹 Komposisi musuh (${an.n})</h3>
+      <div class="kv"><span>${an.names.join(', ')}</span></div>
+      <div class="mixbar"><div style="width:${an.phys/tot*100}%;background:#4dd0a6"></div><div style="width:${an.mag/tot*100}%;background:#9d7bff"></div></div>
+      <div class="kv"><span>🗡️ Physical</span><b>${an.phys.toFixed(1)}</b></div>
+      <div class="kv"><span>🔮 Magical</span><b>${an.mag.toFixed(1)}</b></div>
+      ${an.burst?`<div class="kv"><span>💥 Burst</span><b>${an.burst}</b></div>`:''}
+      ${an.cc?`<div class="kv"><span>⛓️ CC</span><b>${an.cc}</b></div>`:''}
+      ${an.heal?`<div class="kv"><span>💚 Heal/Sustain</span><b>${an.heal}</b></div>`:''}
+      ${an.mobility?`<div class="kv"><span>💨 Mobilitas</span><b>${an.mobility}</b></div>`:''}
+      ${an.stealth?`<div class="kv"><span>👁️ Stealth</span><b>${an.stealth}</b></div>`:''}
+      ${an.tank?`<div class="kv"><span>🥩 Tank</span><b>${an.tank}</b></div>`:''}
+    </div>
+    <h2 class="sec">🛡️ Tim counter rekomendasi</h2>
+    <div id="teamList">${team.map((t,i)=>t.hero?`
+      <div class="teamrow" data-i="${i}">${face(t.hero)}
+        <div class="info"><div class="ln">${t.lane}</div><div class="hn">${t.hero.name}</div>
+        <div class="rs">${t.why.length?t.why.join(' · '):'counter umum lane ini'}</div></div>
+        <div class="chev">▾</div>
+      </div>
+      <div class="build" id="build${i}"></div>`:'').join('')}
+    </div>
+    <h2 class="sec">🧠 Strategi</h2>
+    ${tips.map(t=>`<div class="tip">${t}</div>`).join('')}
+    <button class="btn ghost" onclick="go('tabLawan')">‹ Ubah hero musuh</button>`;
+  w.querySelectorAll('.teamrow').forEach(r=>r.onclick=()=>{
+    const i = +r.dataset.i, b = document.getElementById('build'+i);
+    if(b.classList.contains('open')){b.classList.remove('open');return;}
+    w.querySelectorAll('.build').forEach(x=>x.classList.remove('open'));
+    b.innerHTML = buildHTML(team[i].hero, an);
+    b.classList.add('open');
+    b.scrollIntoView({block:'nearest',behavior:'smooth'});
+  });
+}
+
+function buildHTML(hero, an){
+  const b = E.buildFor(hero, an, ITEMS);
+  const arc = E.arcanaFor(hero, ARCANAS);
+  const dot = cat => `<span class="dot" style="background:${CATCOLOR[cat]||'#aaa'}"></span>`;
+  return `
+    <div class="itline">${dot('movement')}<div><b>👟 ${b.boots.item?b.boots.item.name:'-'} </b><span class="rsn">— ${b.boots.reason}</span></div></div>
+    ${b.core.map((it,i)=>`<div class="itline">${dot(it.category)}<div><b>${i+1}. ${it.name}</b><div class="rsn">${it.stats||''}</div></div></div>`).join('')}
+    ${b.situational.map(s=>`<div class="itline">${dot(s.item.category)}<div><b>🔁 ${s.item.name}</b> <span class="rsn">— ${s.reason}</span></div></div>`).join('')}
+    ${arc?`<div class="itline"><div>🀄 <b>Arcana:</b> <span class="tag" style="background:#5c1f28">${arc.red.name}</span><span class="tag" style="background:#1f3a5c">${arc.blue.name}</span><span class="tag" style="background:#1f5c3a">${arc.green.name}</span><div class="rsn">${arc.note||''}</div></div></div>`:''}
+    ${b.notes.map(n=>`<div class="note">ℹ️ ${n}</div>`).join('')}
+    <button class="btn sm ghost" onclick="openHero('${hero.id}')">Detail ${hero.name}</button>`;
+}
+
+// ---------- RACIK ----------
+function renderRacikGrid(){
+  const list = filtHeroes(state.qRacik,state.fRacik);
+  const g = document.getElementById('gridRacik');
+  g.innerHTML = list.map(h=>heroCard(h,state.racik===h.id)).join('');
+  bindGrid(g, id=>{state.racik=id;renderRacikGrid();renderRacik();});
+}
+function renderRacik(){
+  const w = document.getElementById('racikWrap');
+  const hero = HEROES.find(h=>h.id===state.racik);
+  if(!hero){w.innerHTML='';return;}
+  const an = E.analyzeEnemy([], HEROES);
+  w.innerHTML = `<div class="card"><h3>🎴 ${hero.name} <span class="note">${(hero.class||[]).join('/')} · ${(hero.roles||[]).join('/')}</span></h3>${buildHTML(hero,an)}</div>`;
+  w.scrollIntoView({block:'nearest',behavior:'smooth'});
+}
+
+// ---------- DATA ----------
+document.querySelectorAll('#dataTabs .chip').forEach(ch=>ch.onclick=()=>{
+  state.dt=ch.dataset.dt;
+  document.querySelectorAll('#dataTabs .chip').forEach(x=>x.classList.remove('active'));
+  ch.classList.add('active'); renderData();
+});
+document.getElementById('qData').oninput=e=>{state.qData=e.target.value.toLowerCase();renderData();};
+function renderData(){
+  const w = document.getElementById('dataWrap');
+  const q = state.qData;
+  if(state.dt==='heroes'){
+    const list = HEROES.filter(h=>!q||h.name.toLowerCase().includes(q));
+    w.innerHTML = `<div class="grid">${list.map(h=>heroCard(h,false)).join('')}</div>`;
+    bindGrid(w, openHero);
+  } else if(state.dt==='items'){
+    const list = ITEMS.filter(i=>!q||i.name.toLowerCase().includes(q));
+    w.innerHTML = list.map(i=>`<div class="itline" data-in="${i.id}">${`<span class="dot" style="background:${CATCOLOR[i.category]||'#aaa'}"></span>`}<div><b>${i.name}</b> <span class="tag">${i.category}</span><div class="rsn">${i.stats||''}</div></div></div>`).join('');
+    w.querySelectorAll('[data-in]').forEach(el=>el.onclick=()=>openItem(el.dataset.in));
+  } else {
+    const cols = ['red','blue','green'].map(c=>`
+      <div class="arccol ${c}"><div class="ab">${c==='red'?'🟥 Merah':c==='blue'?'🟦 Biru':'🟩 Hijau'}</div>
+      ${(ARCANAS[c]||[]).filter(a=>!q||a.name.toLowerCase().includes(q)).map(a=>`<small><b>${a.name}</b> — ${Object.entries(a.effects_lv5||{}).map(([k,v])=>k.replace(/_/g,' ')+' +'+v).join(', ')}</small>`).join('')}
+      </div>`).join('');
+    w.innerHTML = `<div class="arcrow">${cols}</div>
+      <h2 class="sec">Set rekomendasi</h2>
+      ${(ARCANAS.recommended_sets||[]).map(s=>`<div class="tip"><b>${s.archetype}</b><br>🟥 ${s.red} · 🟦 ${s.blue} · 🟩 ${s.green}<br><span class="note">${s.note||''}</span></div>`).join('')}`;
+  }
+}
+
+// ---------- MODAL ----------
+const modal = document.getElementById('modal'), sheet = document.getElementById('sheet');
+modal.onclick = e=>{if(e.target===modal) modal.classList.remove('open');};
+function openHero(id){
+  const h = HEROES.find(x=>x.id===id); if(!h) return;
+  const c = E.heroCounters(id, HEROES);
+  const arc = E.arcanaFor(h, ARCANAS);
+  sheet.innerHTML = `<button class="close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
+    <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">${face(h)}<div><h3 style="color:#f5c451">${h.name}</h3><div class="note">${(h.class||[]).join(' / ')} · ${(h.roles||[]).join(' / ')} · ${h.damageType} · ${h.range}</div></div></div>
+    <div>${(h.traits||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+    <h2 class="sec">Skill</h2>
+    ${(h.skills||[]).map(s=>`<div class="skill"><b>${s.name}</b><br>${s.effect||''}</div>`).join('')||'<p class="note">Data skill belum tersedia.</p>'}
+    ${c&&c.counters.length?`<h2 class="sec">Di-counter oleh</h2><div>${c.counters.map(x=>`<span class="tag">${x.name}</span>`).join('')}</div>`:''}
+    ${arc?`<h2 class="sec">Arcana rekomendasi</h2><div class="note">🟥 ${arc.red.name} · 🟦 ${arc.blue.name} · 🟩 ${arc.green.name}<br>${arc.note||''}</div>`:''}`;
+  modal.classList.add('open'); sheet.scrollTop=0;
+}
+function openItem(id){
+  const i = ITEMS.find(x=>x.id===id); if(!i) return;
+  sheet.innerHTML = `<button class="close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
+    <h3 style="color:#f5c451;margin-bottom:8px">${i.name}</h3>
+    <div style="margin-bottom:8px"><span class="tag">${i.category}</span></div>
+    <p style="font-size:13px;margin-bottom:8px">${i.stats||''}</p>
+    <p style="font-size:13px;color:#c6d2e6">${i.effect||''}</p>
+    ${i.counters?`<h2 class="sec">Counter untuk</h2><p class="note">${i.counters}</p>`:''}`;
+  modal.classList.add('open'); sheet.scrollTop=0;
+}
+load();
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
